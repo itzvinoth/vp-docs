@@ -1,0 +1,78 @@
+.su-input-group {
+	position: relative;
+	margin-bottom: 15px;
+
+	input {
+		border: 0;
+		border-bottom: 1px solid $color-mercury-grey;
+		padding: 6px 0;
+		color: $color-tundora-grey;
+		width: 100%;
+
+		&:disabled {
+			background-color: #ffffff;
+			background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23dddddd' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+			color: $color-silver-grey;
+			cursor: not-allowed;
+			box-sizing: border-box;
+			padding: 6px;
+			border-color: transparent;
+		}
+		&:focus {
+			outline: 0;
+			border-color: $color-silver-grey;
+		}
+	}
+
+	&.disabled {
+		.su-input-label {
+			color: $color-silver-grey;
+		}
+	}
+
+	.su-input-label {
+		display: block;
+		visibility: hidden;
+	}
+
+	.su-input-label.su-visible {
+		@extend .slideInUp;
+		@extend .animated;
+		visibility: visible;
+	}
+	.su-dynamic-label {
+		@extend .text-xxsmall;
+	}
+
+	&.su-static-label .su-input-label {
+		visibility: visible;
+		animation: none;
+	}
+
+	&.uppercase {
+		input, textarea, select {
+			text-transform: uppercase;
+		}
+	}
+
+	// Error state
+	.su-message {
+		@extend .slideInDown;
+		@extend .animated;
+		@extend .text-xxsmall;
+		// visibility: hidden;
+	}
+
+	.su-message:empty:before {
+		content: "\200b"; // Reserve space.
+	}
+
+	&.su-error-state input, &.su-error-state textarea, &.su-error-state select {
+		border-color: $color-pomegranate-red;
+	}
+
+	&.su-error-state .su-message {
+		color: $color-pomegranate-red;
+	}
+
+}

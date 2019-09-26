@@ -1,0 +1,25 @@
+.su-select {
+    position: relative;
+    @extend .text-xsmall;
+
+    .icon {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 10px;
+        pointer-events: none;
+    }
+
+    select {
+        width: 100%;
+        padding: 3px 30px 3px 8px;
+        background: $color-solid-white;
+        border-radius: 2px;
+        border-color: $color-mercury-grey;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        outline: none;
+    }
+}
