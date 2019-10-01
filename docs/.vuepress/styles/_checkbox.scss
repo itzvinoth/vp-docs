@@ -1,0 +1,83 @@
+$color-checked: $color-havelock-blue;
+$color-border: $color-silver-grey;
+$color-background: $color-solid-white;
+$color-focused: $color-mercury-grey;
+$color-disabled: $color-seashell-white;
+
+.su-checkbox-group {
+	box-sizing: border-box;
+	line-height: 1;
+
+	.su-checkbox {
+		opacity: 0;
+		position: absolute;
+
+		&:disabled + .su-checkbox-label {
+			opacity: 0.5;
+			cursor: not-allowed;
+			// background: $color-disabled;
+		}
+
+		&:focus + .su-checkbox-label .su-checkbox-value {
+			outline: none;
+			border-bottom: 1px solid $color-focused;
+		}
+
+		&:checked + .su-checkbox-label .su-checkbox-tick {
+			top: 3px;
+		}
+	}
+
+	.su-checkbox-label {
+		cursor: pointer;
+	}
+
+	.su-checkbox-value {
+		vertical-align: middle;
+		margin-left: 5px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0);
+	}
+
+	// The box.
+	.su-checkbox-box {
+		position: relative;
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+
+		border: 1px solid $color-border;
+		box-sizing: border-box;
+		border-radius: 2px;
+	}
+
+	// Tick.
+	.su-checkbox-tick {
+		top: 20px;
+		left: 2px;
+		right: 2px;
+		width: 8px;
+		height: 3px;
+		content: '';
+		position: absolute;
+		border-left: 2px solid;
+		border-bottom: 2px solid;
+		margin: auto;
+
+		transform: rotate(-45deg) translate3d(0, 0, 0);
+		transform-origin: center center;
+		// transition: top 0.5s cubic-bezier(.19, 1, .22, 1);
+		border-color: $color-checked;
+	}
+
+	// "Dash".
+	&.indeterminate {
+		.su-checkbox-tick {
+			transform: none;
+			border-left: none;
+		}
+	}
+}

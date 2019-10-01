@@ -2,7 +2,9 @@ import './styles/index.scss';
 import Button from './components/Button.vue'
 import Loader from './components/Loader.vue'
 import Input from './components/Input.vue'
+import Checkbox from './components/Checkbox.vue'
 import Select from './components/Select.vue'
+import Switch from './components/Switch.vue'
 import RadioGroup from './components/RadioGroup.vue'
 import Radio from './components/Radio.vue'
 import NumberModifier from './components/NumberModifier.vue'
@@ -19,6 +21,8 @@ export default ({
   // Vue.component('NumberModifier', require('./components/NumberModifier.vue'));
   Vue.component("su-button", Button)
   Vue.component("su-loader", Loader)
+  Vue.component("su-checkbox", Checkbox)
+  Vue.component("su-switch", Switch)
   Vue.component("su-input", Input)
   Vue.component("su-select", Select)
   Vue.component("su-radio-group", RadioGroup)

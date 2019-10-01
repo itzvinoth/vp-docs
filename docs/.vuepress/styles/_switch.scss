@@ -1,0 +1,56 @@
+$color-background: $color-solid-white;
+$color-state1: $color-pomegranate-red;
+$color-state2: $color-pomegranate-red;
+$color-label: $color-dusty-grey;
+
+.su-switch-group {
+	.su-switch[type=checkbox]{
+		display: none;
+	}
+
+	.su-switch-label {
+		color: $color-label;
+	}
+
+	.su-switch-control {
+		background: $color-state1;
+		position: relative;
+		text-indent: -9999px;
+		cursor: pointer;
+
+		display: inline-block;
+		vertical-align: middle;
+		width: 32px;
+		height: 16px;
+		border-radius: 100px;
+	}
+
+	.su-switch-control:after {
+		background: $color-background;
+		content: '';
+		position: absolute;
+		top: 3px;
+		left: 4px;
+		width: 10px;
+		height: 10px;
+		transition: 0.2s;
+		border-radius: 90px;
+	}
+
+	.su-switch:checked + .su-switch-control {
+		background: $color-state2;
+	}
+
+	.su-switch:checked + .su-switch-control:after {
+		left: calc(100% - 5px);
+		transform: translateX(-100%);
+	}
+
+	.su-switch:disabled + .su-switch-control {
+		cursor: not-allowed;
+	}
+
+	.su-switch-control:active:after {
+		width: 14px;
+	}
+}

@@ -97,7 +97,7 @@ export default {
 <su-input type="text" v-model="length" :maxlength="6" static-label no-error label="Maximum length"></su-input>
 
 ## Select
-
+<br>
 
 <su-select v-model="gender">
 	<option value="male">Male</option>
@@ -114,6 +114,18 @@ export default {
 	<su-radio label="Apple" value="apple"> Apple </su-radio>
 	<su-radio label="Orange" value="orange"> Orange </su-radio>
 </su-radio-group>
+
+## Checkbox
+<br>
+<su-checkbox v-model="bike" label="Bike"></su-checkbox>
+<su-checkbox v-model="car" label="Car"></su-checkbox>
+
+## Switch
+<br>
+<su-switch v-model="order" state-on-label="Sell" state-off-label="Buy" state-on="SELL" state-off="BUY"></su-switch>
+
+## Toast
+
 
 <script>
 import Vue from 'vue'
@@ -145,7 +157,10 @@ export default {
 			},
 			gender: 'male',
 			maritalStatus: ['married'],
-			fruits: 'orange'
+			fruits: 'orange',
+			bike: false,
+			car: true,
+			order: 'BUY'
 		}
 	},
 	methods: {
