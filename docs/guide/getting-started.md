@@ -125,7 +125,8 @@ export default {
 <su-switch v-model="order" state-on-label="Sell" state-off-label="Buy" state-on="SELL" state-off="BUY"></su-switch>
 
 ## Toast
-
+<br>
+<su-button type="button" class="button button-blue" @click.native="btnClick">SUCCESS</su-button>
 
 <script>
 import Vue from 'vue'
@@ -172,6 +173,12 @@ export default {
 		},
 		handleInput: function ($event) {
 			console.log('handleInput', $event)
+		},
+		btnClick: function () {
+			this.$toast.success({
+				message: "I am a toast with success message",
+				orientation: this.$toast.TOP_RIGHT
+			})
 		}
 	}
 }

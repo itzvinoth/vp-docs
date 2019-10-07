@@ -1,15 +1,8 @@
 import './styles/index.scss';
-import Button from './components/Button.vue'
-import Loader from './components/Loader.vue'
-import Input from './components/Input.vue'
-import Checkbox from './components/Checkbox.vue'
-import Select from './components/Select.vue'
-import Switch from './components/Switch.vue'
-import RadioGroup from './components/RadioGroup.vue'
-import Radio from './components/Radio.vue'
-import NumberModifier from './components/NumberModifier.vue'
-import DataTable from './components/DataTable.vue'
-import deepClone from "lodash/cloneDeep"
+// import NumberModifier from './components/NumberModifier.vue'
+import Events from './events'
+import SimpleUI from './components/SimpleUI'
+import deepClone from 'lodash/cloneDeep'
 import VTooltip from 'v-tooltip'
 
 export default ({
@@ -19,16 +12,13 @@ export default ({
   siteData // site metadata
 }) => {
   // Vue.component('NumberModifier', require('./components/NumberModifier.vue'));
-  Vue.component("su-button", Button)
-  Vue.component("su-loader", Loader)
-  Vue.component("su-checkbox", Checkbox)
-  Vue.component("su-switch", Switch)
-  Vue.component("su-input", Input)
-  Vue.component("su-select", Select)
-  Vue.component("su-radio-group", RadioGroup)
-  Vue.component("su-radio", Radio)
-  Vue.use(NumberModifier)
-  Vue.use(DataTable)
+  // Vue.use(NumberModifier)
+  Vue.use(SimpleUI)
   Vue.use(VTooltip)
+  // Register events and pass it as prop to all child components
+  let eventsInstance = new Events()
+  Vue.prototype.$events = eventsInstance
+
+  Vue.prototype.$toast = new SimpleUI.Toast(eventsInstance.eventBus)
   Vue.prototype.$clone = deepClone
 }
