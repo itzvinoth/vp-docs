@@ -17,10 +17,16 @@ module.exports = {
         {
           title: 'Guide',
           collapsable: false,
-
           children: [
             '',
             'getting-started',
+            'button',
+            'input',
+            'select',
+            'radio',
+            'checkbox',
+            'switch',
+            'toast',
             'table',
             'table-sorting',
             'table-limit',
