@@ -34,6 +34,9 @@ If `dynamic-label` present, then the animated label appears.
 <br>
 
 #### Max length
+
+Specifies the maximum number of characters that can be entered in a text-type input.
+
 ```html
 <su-input type="text" v-model="maxLen" :maxlength="6" static-label label="Auto focus"></su-input>
 ```
@@ -41,7 +44,10 @@ If `dynamic-label` present, then the animated label appears.
 <su-input type="text" v-model="maxLen" :maxlength="6" static-label label="Maximum length"></su-input>
 <br>
 
-#### Events
+#### Event handling
+
+Listen to DOM events and run some JavaScript when they’re triggered.
+
 ```html
 <su-input type="text" v-model="fname" static-label @focus="onFocus" @blur="onBlur" @input="handleInput" :min="28" label="Father name"></su-input>
 ```
@@ -92,6 +98,8 @@ In some use cases number field spinner looks ugly. For that case include `hide-s
 <br>
 
 #### Maximum length for type number
+
+Specifies the maximum number of characters that can be entered in a number-type input
 
 ```html
 <su-input type="number" v-model="pin" :maxlength="6" static-label label="PIN"></su-input>
