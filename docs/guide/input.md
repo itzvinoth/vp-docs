@@ -2,23 +2,57 @@
 ## Input
 Input component. `su-input`
 
-#### Auto focus
+#### Basic
+
+A basic input field, if `static-label` present, then the label is statically fixed on top of the input field.
 ```html
-<su-input type="text" v-model="afocus" autofocus static-label no-error label="Auto focus"></su-input>
+<su-input type="text" v-model="name" static-label label="Enter name" placeholder="Enter your name"></su-input>
 ```
 
-<su-input type="text" v-model="afocus" autofocus static-label no-error label="Auto focus"></su-input>
+<su-input type="text" v-model="name" static-label label="Enter name" placeholder="Enter your name"></su-input>
 <br>
 
-#### Normal
+#### Auto focus
+
+A Boolean attribute which, if present, indicates that the input should automatically have [focus](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#autofocus) when the page has finished loading.
+
 ```html
-<su-input type="text" v-model="name"  static-label no-error label="Enter name" placeholder="Enter your name"></su-input>
+<su-input type="text" v-model="afocus" autofocus static-label label="Auto focus"></su-input>
 ```
 
-<su-input type="text" v-model="name" static-label no-error label="Name" placeholder="Enter your name"></su-input>
+<su-input type="text" v-model="afocus" autofocus static-label label="Auto focus"></su-input>
+<br>
+
+#### Dynamic label
+
+If `dynamic-label` present, then the animated label appears.
+
+```html
+<su-input type="text" v-model="mname" dynamic-label label="Father name" placeholder="Father name"></su-input>
+```
+<su-input type="text" v-model="mname" dynamic-label label="Father name" placeholder="Father name"></su-input>
+<br>
+
+#### Max length
+```html
+<su-input type="text" v-model="maxLen" :maxlength="6" static-label label="Auto focus"></su-input>
+```
+
+<su-input type="text" v-model="maxLen" :maxlength="6" static-label label="Maximum length"></su-input>
+<br>
+
+#### Events
+```html
+<su-input type="text" v-model="fname" static-label @focus="onFocus" @blur="onBlur" @input="handleInput" :min="28" label="Father name"></su-input>
+```
+
+<!-- adding input events -->
+<su-input type="text" v-model="fname" static-label @focus="onFocus" @blur="onBlur" @input="handleInput" :min="28" label="Father name"></su-input>
 <br>
 
 #### Min & Max
+
+Supports the range by `min` and `max`
 ```html
 <!-- type number with min value 28 -->
 <su-input type="number" v-model="age" static-label no-error label="Enter age" :min="28"></su-input>
@@ -28,45 +62,42 @@ Input component. `su-input`
 <br>
 
 #### Step
+
+A numeric input box whose values can be increased or decreased using a value step. The default `step` takes integer 1.
+
 ```html
-<!-- step -->
-<su-input type="number" v-model="volumn" :min="28" :step="step" label="Volume"></su-input>
+<su-input type="number" v-model="volumn" :min="28" :step="3" label="Volume"></su-input>
 ```
 
-<su-input type="number" v-model="volumn" static-label no-error :min="28" :step="step" label="Volume"></su-input>
+<su-input type="number" v-model="volumn" static-label :min="28" :step="3" label="Volume"></su-input>
 <br>
 
 #### Rules
 ```html
 <!-- not working, needs to check it later -->
-<su-input type="number" v-model="username" static-label no-error :rules="rules.username"></su-input>
+<su-input type="number" v-model="username" static-label :rules="rules.username"></su-input>
 ```
 
-<su-input type="text" v-model="username" :rules="rules.userName"></su-input>
+<su-input type="text" v-model="username" static-label :rules="rules.userName"></su-input>
 <br>
 
-#### Events
+#### Hide number spinners
+
+In some use cases number field spinner looks ugly. For that case include `hide-spinner` attribute to hide the spinner from the number field.
 ```html
-<su-input type="text" v-model="fname" static-label no-error @focus="onFocus" @blur="onBlur" @input="handleInput" :min="28" label="Father name"></su-input>
+<su-input type="number" hide-spinner v-model="nospin" static-label label="Enter age"></su-input>
 ```
 
-<!-- adding input events -->
-<su-input type="text" v-model="fname" static-label no-error @focus="onFocus" @blur="onBlur" @input="handleInput" :min="28" label="Father name"></su-input>
+<su-input type="number" hide-spinner v-model="nospin" static-label label="Enter age"></su-input>
 <br>
 
-#### Dynamic label
-```html
-<su-input type="text" v-model="mname" dynamic-label no-error label="Father name" placeholder="Father name" @input="handleInput"></su-input>
-```
-<su-input type="text" v-model="mname" dynamic-label :no-error="false" :message="'yes it error'" label="Father name" placeholder="Father name"></su-input>
-<br>
+#### Maximum length for type number
 
-#### Max length
 ```html
-<su-input type="text" v-model="length" :maxlength="6" static-label no-error label="Auto focus"></su-input>
+<su-input type="number" v-model="pin" :maxlength="6" static-label label="PIN"></su-input>
 ```
 
-<su-input type="text" v-model="length" :maxlength="6" static-label no-error label="Maximum length"></su-input>
+<su-input type="number" v-model="pin" :maxlength="6" static-label label="PIN"></su-input>
 <br>
 
 
@@ -87,10 +118,11 @@ export default {
 			fname: '',
 			mname: '',
 			afocus: '',
-			length: '',
+			maxLen: 'WX9090',
 			volumn: 28,
-			step: 3,
 			username: '',
+			nospin: 0,
+			pin: 123456,
 			rules: {
 				userName: [{
 					validator: minMaxValidate,

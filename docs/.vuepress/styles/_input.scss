@@ -24,6 +24,12 @@
 		}
 	}
 
+	.su-spinner::-webkit-inner-spin-button,
+	.su-spinner::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
 	&.disabled {
 		.su-input-label {
 			color: $color-silver-grey;

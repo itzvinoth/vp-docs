@@ -3,7 +3,8 @@
 		<label v-if="this.staticLabel || this.animate" :class="labelClasses">{{ currentLabel }}</label>
 
 		<input v-if="type != 'textarea'" :type="type" ref="input" v-bind="$props" :placeholder="currentPlaceholder"
-			@focus="onFocus()" @blur="onBlur()" @input="handleInput" :value="currentValue" autocorrect="off">
+			oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" :maxlength="maxlength" :max="maxVal"
+			@focus="onFocus()" @blur="onBlur()" @input="handleInput" :class="spinnerClasses" :value="currentValue" autocorrect="off">
 
 		<textarea v-else :type="type" ref="input" v-bind="$props" :placeholder="currentPlaceholder"
 			@focus="onFocus()" @blur="onBlur()" @input="handleInput"></textarea>
@@ -17,10 +18,8 @@
 		props: {
 			name: Number,
 			minlength: Number,
-			maxlength: Number,
 			min: Number,
 			max: Number,
-			step: Number,
 			value: [String, Number],
 			disabled: Boolean,
 			readonly: Boolean,
@@ -31,6 +30,18 @@
 			noError: Boolean,
 			staticLabel: Boolean,
 			autocapitalize: String,
+			step: {
+				type: Number,
+				default: 1
+			},
+			maxlength: {
+				type: Number,
+				default: 5000
+			},
+			hideSpinner: {
+				type: Boolean,
+				default: false
+			},
 			animate: {
 				type: Boolean,
 				default: true
@@ -109,6 +120,16 @@
 			},
 			labelClasses () {
 				return ["su-input-label", {"su-visible": this.labelVisible, "su-dynamic-label": !this.staticLabel}]
+			},
+			spinnerClasses () {
+				return {
+					"su-spinner": this.hideSpinner
+				}
+			},
+			maxVal () {
+				if (this.type === "number") {
+					return this.max || (10 ** this.maxlength) - 1
+				}
 			}
 		},
 		methods: {
