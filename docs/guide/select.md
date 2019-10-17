@@ -1,16 +1,14 @@
-
 ## Select
-<br>
 
+```vue
 <su-select v-model="gender">
-	<option value="male">Male</option>
-	<option value="female">Female</option>
+	<option v-for="(g, key) in gs" :key="key" :value="key"> {{ g }} </option>
 </su-select>
-<br>
+```
 
-<su-select v-model="maritalStatus" :multiple="true">
-	<option value="married">Married</option>
-	<option value="unmarried">Unmarried</option>
+<br>
+<su-select v-model="gender">
+	<option v-for="(g, key) in gs" :key="key" :value="key"> {{ g }} </option>
 </su-select>
 
 <script>
@@ -18,8 +16,11 @@ import Vue from 'vue'
 export default {
 	data () {
         return {
-			gender: 'male',
-            maritalStatus: ['married']
+			gender: '',
+			gs: {
+				"male": "Male",
+				"female": "Female"
+			}
         }
     }
 }
