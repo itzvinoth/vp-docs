@@ -23,7 +23,7 @@
 export default {
 	data () {
 		return {
-			// headers and data arrays are presented in the above 
+			// headers and data arrays are presented in the above
 			dataHoldingsHeader: headers,
 			dataHoldings: data
 		}
@@ -53,7 +53,12 @@ export default {
 </div>
 
 <script>
+import DataTable from "../.vuepress/components/SimpleUI/components/DataTable"
+
 export default {
+	components: {
+		"DataTable": DataTable
+	},
 	data () {
 		return {
 			dataHoldingsHeader: [{

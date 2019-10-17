@@ -2,39 +2,6 @@
 
 ```vue
 <div>
-	<DataTable :headers="dataHoldingsHeader" :data="dataHoldings">
-		<template slot-scope="props">
-			<td>
-				{{ props.row.tradingsymbol }}
-			</td>
-			<td>
-				{{ props.row.collateral_value }}
-			</td>
-			<td>
-				{{ props.row.pledge_qty }}
-			</td>
-			<td>
-				{{ props.row.loan_value }}
-			</td>
-		</template>
-	</DataTable>
-</div>
-
-<script>
-export default {
-	data () {
-		return {
-			// headers and data arrays are presented in the above 
-			dataHoldingsHeader: headers,
-			dataHoldings: data
-		}
-	},
-
-}
-</script>
-```
-
-<div>
 	<DataTable :headers="dataHoldingsHeader" :data="dataHoldings" toolbar="false">
 		<span slot="toolbar-after" class="toolbar-after">
 			<a rel="noopener noreferrer" target="_blank" :href="''">View Reports after</a>
@@ -60,6 +27,48 @@ export default {
 export default {
 	data () {
 		return {
+			// headers and data arrays are presented in the above
+			dataHoldingsHeader: headers,
+			dataHoldings: data
+		}
+	},
+
+}
+</script>
+```
+
+<div>
+	<DataTable :headers="dataHoldingsHeader" :data="dataHoldings" toolbar="toolbar">
+		<span slot="toolbar-after" class="toolbar-after">
+			<a rel="noopener noreferrer" target="_blank" :href="''">View Reports after</a>
+		</span>
+		<template slot-scope="props">
+			<td>
+				{{ props.row.tradingsymbol }}
+			</td>
+			<td>
+				{{ props.row.collateral_value }}
+			</td>
+			<td>
+				{{ props.row.pledge_qty }}
+			</td>
+			<td>
+				{{ props.row.loan_value }}
+			</td>
+		</template>
+	</DataTable>
+</div>
+
+<script>
+import DataTable from "../.vuepress/components/SimpleUI/components/DataTable"
+
+export default {
+	components: {
+		"DataTable": DataTable
+	},
+	data () {
+		return {
+			toolbar: false,
 			dataHoldingsHeader: [{
 				class: [],
 				label: "Symbol",
@@ -113,9 +122,9 @@ export default {
 	          "quantity": 1.0,
 	          "pledge_qty": 1.0,
 	          "collateral_value": 22.0
-	        }],
+	        }]
 		}
-	},
+	}
 
 }
 </script>

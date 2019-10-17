@@ -22,4 +22,24 @@
         cursor: pointer;
         outline: none;
     }
+
+    .arrow {
+        display: inline-block;
+        float: left;
+        position: relative;
+        top: 7px;
+        border: solid #9b9b9b;
+        border-width: 0 1px 1px 0;
+        padding: 3px;
+        opacity: 0;
+    }
+    .arrow.asc {
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+    }
+    .arrow.desc {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        top: 3px !important;
+    }
 }

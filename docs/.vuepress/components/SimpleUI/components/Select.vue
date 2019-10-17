@@ -19,7 +19,7 @@
 			<slot></slot>
 		</select>
 
-		<i class="icon icon-chevron-down"></i>
+		<span class="arrow arrow-show arrow desc"></span>
 	</div>
 </template>
 
