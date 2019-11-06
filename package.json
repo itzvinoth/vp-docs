@@ -8,6 +8,7 @@
         "sass-loader": "^8.0.0"
     },
     "dependencies": {
-        "v-tooltip": "^2.0.2"
+        "v-tooltip": "^2.0.2",
+        "vue-bytesize-icons": "^0.1.1"
     }
 }

@@ -78,15 +78,6 @@ A numeric input box whose values can be increased or decreased using a value ste
 <su-input type="number" v-model="volumn" static-label :min="28" :step="3" label="Volume"></su-input>
 <br>
 
-#### Rules
-```html
-<!-- not working, needs to check it later -->
-<su-input type="number" v-model="username" static-label :rules="rules.username"></su-input>
-```
-
-<su-input type="text" v-model="username" static-label :rules="rules.userName"></su-input>
-<br>
-
 #### Hide number spinners
 
 In some use cases number field spinner looks ugly. For that case include `hide-spinner` attribute to hide the spinner from the number field.
@@ -113,13 +104,6 @@ Specifies the maximum number of characters that can be entered in a number-type 
 import Vue from 'vue'
 export default {
 	data () {
-		let minMaxValidate = (rule, value) => {
-			if (rule.min) {
-				if (value.length < rule.min) {
-					return new Error(rule.label + " should be minimum " + rule.min + " characters.")
-				}
-			}
-		}
 		return {
 			name: 'Bob',
 			age: 30,
@@ -130,14 +114,7 @@ export default {
 			volumn: 28,
 			username: '',
 			nospin: 0,
-			pin: 123456,
-			rules: {
-				userName: [{
-					validator: minMaxValidate,
-					min: 6,
-					label: "User Name"
-				}]
-			}
+			pin: 123456
 		}
 	},
 	methods: {

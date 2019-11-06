@@ -1,45 +1,34 @@
 .su-select {
     position: relative;
-    @extend .text-xsmall;
+    // @extend .text-xsmall;
 
     .icon {
         position: absolute;
-        top: 5px;
+        top: 2px;
         right: 5px;
-        font-size: 10px;
+        font-size: 14px;
         pointer-events: none;
+        color: #9b9b9b;
     }
 
     select {
         width: 100%;
-        padding: 3px 30px 3px 8px;
+        padding: 3px 30px 3px 0px;
         background: $color-solid-white;
         border-radius: 2px;
+        border: none;
+        border-bottom: 1px solid #e1e1e1;
         border-color: $color-mercury-grey;
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
         cursor: pointer;
         outline: none;
+        &:focus {
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #e1e1e1;
+        }
     }
 
-    .arrow {
-        display: inline-block;
-        float: left;
-        position: relative;
-        top: 7px;
-        border: solid #9b9b9b;
-        border-width: 0 1px 1px 0;
-        padding: 3px;
-        opacity: 0;
-    }
-    .arrow.asc {
-        transform: rotate(-135deg);
-        -webkit-transform: rotate(-135deg);
-    }
-    .arrow.desc {
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        top: 3px !important;
-    }
 }

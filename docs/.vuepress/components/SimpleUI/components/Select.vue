@@ -5,9 +5,9 @@
 			:multiple="multiple"
 			:size="nativeSize"
 			v-bind="$attrs"
-			@change="$emit('change', $event)"
-			@blur="$emit('blur', $event)"
-			@focus="$emit('focus', $event)">
+			@change="onChange($event)"
+			@blur="onBlur($event)"
+			@focus="onFocus($event)">
 
 			<option
 				v-if="placeholder"
@@ -20,14 +20,18 @@
 			<slot></slot>
 		</select>
 
-		<span class="arrow arrow-show arrow desc"></span>
+		<chevron-bottom-icon class="icon" width="16" height="16"></chevron-bottom-icon>
 	</div>
 </template>
 
 <script>
+import { ChevronBottomIcon } from 'vue-bytesize-icons'
 	export default {
 		name: "su-select",
 		inheritAttrs: false,
+		components: {
+			ChevronBottomIcon
+		},
 		props: {
 			value: {
 				type: [String, Number, Boolean, Object, Array, Symbol, Function],
@@ -42,6 +46,19 @@
 				selected: this.value,
 				_isSelect: true,
 				_elementRef: "select"
+			}
+		},
+		methods: {
+			onBlur (event) {
+				this.isFocused = false
+				this.$emit('blur', event)
+			},
+			onChange (event) {
+				this.$emit('change', event)
+			},
+			onFocus (event) {
+				this.isFocused = true
+				this.$emit('focus', event)
 			}
 		},
 		watch: {
