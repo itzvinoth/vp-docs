@@ -1,7 +1,10 @@
 ## Switch
 
+If you need to toggling between two states or on-off state.
+
 ```vue
-<su-switch v-model="order" state-on-label="Sell" state-off-label="Buy" state-on="SELL" state-off="BUY"></su-switch>
+<su-switch v-model="order" state-on-label="Sell" state-off-label="Buy" state-on="SELL" state-off="BUY">
+</su-switch>
 ```
 
 <br>

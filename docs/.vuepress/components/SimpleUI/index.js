@@ -1,5 +1,5 @@
 import Vue from "vue"
-// import Form from "./components/Form"
+import Form from "./components/Form"
 import Input from "./components/Input"
 import Radio from "./components/Radio"
 import Checkbox from "./components/Checkbox"
@@ -18,7 +18,7 @@ export default class SimpleUI {}
 SimpleUI.install = function (Vue, options) {
 	// let eventBus = new Vue()
 
-	// Vue.component("su-form", Form)
+	Vue.component("su-form", Form)
 	Vue.component("su-input", Input)
 	Vue.component("su-radio-group", RadioGroup)
 	Vue.component("su-radio", Radio)

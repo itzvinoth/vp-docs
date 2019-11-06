@@ -22,6 +22,7 @@ module.exports = {
             'getting-started',
             'button',
             'input',
+            'form',
             'select',
             'radio',
             'checkbox',

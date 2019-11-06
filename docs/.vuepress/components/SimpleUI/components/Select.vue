@@ -5,6 +5,7 @@
 			:multiple="multiple"
 			:size="nativeSize"
 			v-bind="$attrs"
+			@change="$emit('change', $event)"
 			@blur="$emit('blur', $event)"
 			@focus="$emit('focus', $event)">
 
