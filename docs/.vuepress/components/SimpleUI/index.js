@@ -6,6 +6,7 @@ import Checkbox from "./components/Checkbox"
 import Button from "./components/Button"
 import Switch from "./components/Switch"
 import Loader from "./components/Loader"
+import Modal from "./components/Modal"
 import Toast from "./components/Toast.vue"
 import Select from "./components/Select.vue"
 import RadioGroup from "./components/RadioGroup"
@@ -26,6 +27,7 @@ SimpleUI.install = function (Vue, options) {
 	Vue.component("su-button", Button)
 	Vue.component("su-switch", Switch)
 	Vue.component("su-loader", Loader)
+	Vue.component("su-modal", Modal)
 	// Vue.component("su-avatar", Avatar)
 	Vue.component("su-select", Select)
 	Vue.component("su-table", DataTable)

@@ -1,5 +1,6 @@
 .su-select {
     position: relative;
+    width: 250px;
     // @extend .text-xsmall;
 
     .icon {
@@ -24,6 +25,10 @@
         appearance: none;
         cursor: pointer;
         outline: none;
+        option {
+            box-sizing: content-box;
+            padding: 10px;
+        }
         &:focus {
             outline: none;
             border: none;

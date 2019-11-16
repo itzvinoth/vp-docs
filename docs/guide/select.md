@@ -2,13 +2,15 @@
 
 ```vue
 <su-select v-model="gender">
-	<option v-for="(g, key) in gs" :key="key" :value="key"> {{ g }} </option>
+	<option value="male" key="male">Male</option>
+	<option value="female" key="female">Female</option>
 </su-select>
 ```
 
 <br>
 <su-select v-model="gender">
-	<option v-for="(g, key) in gs" :key="key" :value="key"> {{ g }} </option>
+	<option value="male" key="male">Male</option>
+	<option value="female" key="female">Female</option>
 </su-select>
 
 <script>

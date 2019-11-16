@@ -3,4 +3,17 @@ https://alligator.io/vuejs/vuepress-introduction/
 https://code.luasoftware.com/tutorials/vuepress/import-vuejs-component-into-vuepress/
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tablesz
 
+
+reference for documentation -> https://github.com/kong/kongponents
+
+
 https://vuetensils.stegosource.com/
+
+===============
+suggested names
+===============
+bit-ui
+iota-ui
+jot-ui
+tad-ui
+nil-ui

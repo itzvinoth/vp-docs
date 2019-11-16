@@ -1,27 +1,29 @@
 ## Toolbar
 
 ```vue
-<div>
-	<DataTable :headers="dataHoldingsHeader" :data="dataHoldings" toolbar="false">
-		<span slot="toolbar-after" class="toolbar-after">
-			<a rel="noopener noreferrer" target="_blank" :href="''">View Reports after</a>
-		</span>
-		<template slot-scope="props">
-			<td>
-				{{ props.row.tradingsymbol }}
-			</td>
-			<td>
-				{{ props.row.collateral_value }}
-			</td>
-			<td>
-				{{ props.row.pledge_qty }}
-			</td>
-			<td>
-				{{ props.row.loan_value }}
-			</td>
-		</template>
-	</DataTable>
-</div>
+<template>
+	<div>
+		<DataTable :headers="dataHoldingsHeader" :data="dataHoldings" toolbar="false">
+			<span slot="toolbar-before" class="toolbar-before">
+				<a rel="noopener noreferrer" target="_blank" :href="''">View Reports before</a>
+			</span>
+			<template slot-scope="props">
+				<td>
+					{{ props.row.tradingsymbol }}
+				</td>
+				<td>
+					{{ props.row.collateral_value }}
+				</td>
+				<td>
+					{{ props.row.pledge_qty }}
+				</td>
+				<td>
+					{{ props.row.loan_value }}
+				</td>
+			</template>
+		</DataTable>
+	</div>
+</template>
 
 <script>
 export default {
@@ -39,8 +41,8 @@ export default {
 
 <div>
 	<DataTable :headers="dataHoldingsHeader" :data="dataHoldings" toolbar="toolbar">
-		<span slot="toolbar-after" class="toolbar-after">
-			<a rel="noopener noreferrer" target="_blank" :href="''">View Reports after</a>
+		<span slot="toolbar-before" class="toolbar-before">
+			<a rel="noopener noreferrer" target="_blank" :href="''">View Reports before</a>
 		</span>
 		<template slot-scope="props">
 			<td>

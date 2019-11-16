@@ -19,7 +19,8 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'getting-started',
+            'installation',
+            'color',
             'button',
             'input',
             'form',
@@ -27,6 +28,7 @@ module.exports = {
             'radio',
             'checkbox',
             'switch',
+            'modal',
             'toast',
             'table',
             'table-sorting',

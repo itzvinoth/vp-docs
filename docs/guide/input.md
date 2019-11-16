@@ -80,7 +80,7 @@ A numeric input box whose values can be increased or decreased using a value ste
 
 #### Hide number spinners
 
-In some use cases number field spinner looks ugly. For that case include `hide-spinner` attribute to hide the spinner from the number field.
+In some use cases number field spinner looks ugly. For that case include `hide-spinner` attribute to hide the spinner from the number field. To make the spinner dynamically hide and show you need to use `:hideSpinner='true || false'`
 ```html
 <su-input type="number" hide-spinner v-model="nospin" static-label label="Enter age"></su-input>
 ```
