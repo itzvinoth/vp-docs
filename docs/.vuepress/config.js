@@ -6,6 +6,7 @@ module.exports = {
       // mutate the config for client
     }
   },
+  plugins: ['@vuepress/back-to-top', 'vuepress-plugin-element-tabs'],
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },

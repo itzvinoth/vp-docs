@@ -20,6 +20,46 @@ There are many parameters we use in our table
 | toolbar | | | |
 
 
+:::: tabs
+::: tab template
+
+```vue
+<div>
+	<DataTable :headers="dataHoldingsHeader" :data="dataHoldings">
+		<template slot-scope="props">
+			<td class="textleft table-border">
+				{{ props.row.tradingsymbol }}
+			</td>
+			<td>
+				{{ props.row.collateral_value }}
+			</td>
+			<td>
+				{{ props.row.pledge_qty }}
+			</td>
+			<td>
+				{{ props.row.loan_value }}
+			</td>
+		</template>
+	</DataTable>
+</div>
+
+<script>
+export default {
+	data () {
+		return {
+			// headers and data arrays are presented in the above
+			dataHoldingsHeader: headers,
+			dataHoldings: data
+		}
+	}
+
+}
+</script>
+```
+:::
+
+
+::: tab json
 Basic Data
 
 ```json
@@ -86,44 +126,10 @@ var headers = [{
 	"field": "loan_value"
 }]
 ```
+:::
+::::
 
-## Creating Table
 
-```vue
-<div>
-	<DataTable :headers="dataHoldingsHeader" :data="dataHoldings" sort>
-		<template slot-scope="props">
-			<td class="textleft table-border">
-				{{ props.row.tradingsymbol }}
-			</td>
-			<td>
-				{{ props.row.collateral_value }}
-			</td>
-			<td>
-				{{ props.row.pledge_qty }}
-			</td>
-			<td>
-				{{ props.row.loan_value }}
-			</td>
-		</template>
-	</DataTable>
-</div>
-
-<script>
-export default {
-	data () {
-		return {
-			// headers and data arrays are presented in the above
-			dataHoldingsHeader: headers,
-			dataHoldings: data
-		}
-	},
-
-}
-</script>
-```
-
-<!-- <NumberModifier :start="5"></NumberModifier> -->
 <div>
 	<DataTable :headers="dataHoldingsHeader" :data="dataHoldings">
 		<template slot-scope="props">
@@ -144,7 +150,12 @@ export default {
 </div>
 
 <script>
+import DataTable from "../.vuepress/components/SimpleUI/components/DataTable"
+
 export default {
+	components: {
+		"DataTable": DataTable
+	},
 	data () {
 		return {
 			dataHoldingsHeader: [{
@@ -202,7 +213,6 @@ export default {
 	          "collateral_value": 22.0
 	        }],
 		}
-	},
-
+	}
 }
 </script>

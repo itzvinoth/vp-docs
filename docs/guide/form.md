@@ -8,42 +8,39 @@ Typical validation tasks are: <br>
 
 
 ```vue
-<template>
-    <su-form @submit.prevent="doProceed" ref="contactForm">
-        <div>
-            <su-input type="email" v-model="email"  static-label no-error label="Email ID" placeholder="Enter email ID" :rules="emailRules"></su-input>
-            <su-input type="number" v-model="mobile" static-label no-error label="Phone no" placeholder="Enter phone number" :rules="mobileRules"></su-input>
-        </div>
+<su-form @submit.prevent="doProceed" ref="contactForm">
+    <su-input type="email" v-model="email"  static-label no-error label="Email ID" placeholder="Enter email ID" :rules="emailRules"></su-input>
+    <su-input type="number" v-model="mobile" hide-spinner static-label no-error label="Phone no" placeholder="Enter phone number" :rules="mobileRules"></su-input>
 
-        <div class="contactform-btn-container">
-            <su-button class="button button-blue" type="submit">Next</su-button>
-        </div>
-    </su-form>
-</template>
+    <su-button class="button button-blue" type="submit">Next</su-button>
+</su-form>
 
 <script>
 export default {
     data () {
         return {
-            email: '',
-            mobile: '',
-            username: '',
-            emailRules: [
-                { required: true }
-            ],
-            mobileRules: [
-                { required: true, message: "Please enter your mobile no." }
-            ]
+            emailRules: [{ required: true }],
+            mobileRules: [{
+                required: true, message: "Please enter your mobile no."
+            }]
+        }
+    },
+    methods: {
+        doProceed () {
+            if (!this.$refs["contactForm"].validate()) {
+                return
+            }
         }
     }
 }
 </script>
 ```
+
 <br>
 <su-form @submit.prevent="doProceed" ref="contactForm">
     <div>
         <su-input type="email" v-model="email"  static-label no-error label="Email ID" placeholder="Enter email ID" :rules="emailRules"></su-input>
-        <su-input type="number" v-model="mobile" static-label no-error label="Phone no" placeholder="Enter phone number" :rules="mobileRules"></su-input>
+        <su-input type="number" v-model="mobile" hide-spinner static-label no-error label="Phone no" placeholder="Enter phone number" :rules="mobileRules"></su-input>
     </div>
     <su-button class="button button-blue" type="submit">Next</su-button>
 </su-form>
@@ -55,7 +52,6 @@ export default {
         return {
             email: '',
             mobile: '',
-            username: '',
             emailRules: [
                 { required: true }
             ],

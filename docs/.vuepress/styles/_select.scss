@@ -18,7 +18,7 @@
         background: $color-solid-white;
         border-radius: 2px;
         border: none;
-        border-bottom: 1px solid #e1e1e1;
+        border: 1px solid #e1e1e1;
         border-color: $color-mercury-grey;
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -32,7 +32,7 @@
         &:focus {
             outline: none;
             border: none;
-            border-bottom: 1px solid #e1e1e1;
+            border: 1px solid #e1e1e1;
         }
     }
 

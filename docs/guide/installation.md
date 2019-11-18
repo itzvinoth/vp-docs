@@ -24,7 +24,7 @@ $ npm install simple-ui --save
 This is the recommended way if your application uses vue-cli or has a webpack based build with vue-loader configured. Import the components as .vue files for seamless integration within your project where path of each component is available at the "import" section of a component documentation.
 
 ```vue
-import {Checkbox} from 'simpleui/checkbox';
+import { Checkbox } from 'simpleui/checkbox';
 ```
 
 In the next step, register the component with the tag name you'd like to use.
