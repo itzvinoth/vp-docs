@@ -3,6 +3,7 @@ https://alligator.io/vuejs/vuepress-introduction/
 https://code.luasoftware.com/tutorials/vuepress/import-vuejs-component-into-vuepress/
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tablesz
 
+/mf/allotments
 
 reference for documentation -> https://github.com/kong/kongponents
 
@@ -17,3 +18,37 @@ iota-ui
 jot-ui
 tad-ui
 nil-ui
+
+i.tradingSymbol = data[0];
+i.amc = data[1];
+i.fund = stripPlanName(data[2]);
+i.purchaseAllowed = data[3] == 1;
+i.redemptionAllowed = data[4] == 1;
+i.minPurchaseAmt = data[5] * 1.0;
+i.purchaseAmtMulti = data[6] * 1.0;
+i.minAdditionalPurchaseAmt = data[7] * 1.0;
+i.minRedemptionQty = data[8] * 1.0;
+i.redemptionQtyMulti = data[9] * 1.0;
+i.dividendType = data[10];
+i.dividendInterval = data[11];
+i.dividend = formatDividendTypeWithInterval(data[10], data[11]);
+i.lastDividendDate = data[12] ?? "";
+i.lastDividendPercent = (data[13] ?? 0) * 1.0;
+i.scheme = data[14];
+i.subScheme = data[15];
+i.plan = PlanType(data[16]);
+i.settlementType = data[17];
+i.lastPrice = data[18] * 1.0;
+i.lastPriceDate = niceDate(data[19]);
+i.changePercent = data[20] * 1.0;
+i.launchDate = data[21];
+i.exitLoad = "${data[22]}";
+i.exitLoadSlab = data[23];
+i.expenseRatio = data[24] * 1.0;
+i.oneYearPercent = data[27] * 1.0;
+i.twoYearPercent = data[28] * 1.0;
+i.threeYearPercent = data[29] * 1.0;
+i.fiveYearPercent = data[30] * 1.0;
+i.amcSipFlag = data[31] == 1;
+i.aum = data[32] * 10000000.0;
+i.manager = data[33];
