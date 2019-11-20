@@ -1,5 +1,10 @@
+.theme-default-content:not(.custom) {
+    max-width: 940px !important;
+    padding: 2rem 4.5rem 2rem 2rem !important;
+    box-sizing: border-box;
+}
 .language-html.extra-class, .language-vue.extra-class, .language-json.extra-class, .language-template.extra-class {
-    background-color: #fdfdfd;
+    background-color: #f9f9f9;
 }
 .theme-default-content pre code, .theme-default-content pre[class="language-html, language-vue"] code {
     color: #3f536e !important;
