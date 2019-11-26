@@ -2,7 +2,6 @@ import './styles/index.scss';
 // import NumberModifier from './components/NumberModifier.vue'
 import Events from './events'
 import SimpleUI from './components/SimpleUI'
-import deepClone from 'lodash/cloneDeep'
 import VTooltip from 'v-tooltip'
 
 export default ({
@@ -20,5 +19,4 @@ export default ({
   Vue.prototype.$events = eventsInstance
 
   Vue.prototype.$toast = new SimpleUI.Toast(eventsInstance.eventBus)
-  Vue.prototype.$clone = deepClone
 }

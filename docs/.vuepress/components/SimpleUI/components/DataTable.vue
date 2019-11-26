@@ -116,6 +116,7 @@
 // [ ] Context menu
 
 import debounce from "lodash/debounce"
+import deepClone from 'lodash/cloneDeep'
 
 export default {
 	props: {
@@ -231,7 +232,7 @@ export default {
 	},
 	created () {
 		// Set data fields
-		this.tableHeaders = this.$clone(this.headers)
+		this.tableHeaders = deepClone(this.headers)
 		this.setData(this.data, this.currentLimit)
 
 		// Non reactive vars goes here
@@ -280,9 +281,9 @@ export default {
 	methods: {
 		setData (d, limit) {
 			if (limit === -1) {
-				this.tableData = this.$clone(d)
+				this.tableData = deepClone(d)
 			} else {
-				this.tableData = this.$clone(d.slice(0, limit))
+				this.tableData = deepClone(d.slice(0, limit))
 			}
 
 			if (this.currentSortedHeader) this.doSort(this.currentSortedHeader, true)
