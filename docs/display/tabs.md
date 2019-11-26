@@ -69,6 +69,7 @@ export default {
 }
 </style>
 
+### Sample code
 
 :::: tabs
 ::: tab template
