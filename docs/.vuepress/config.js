@@ -12,8 +12,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Guide', link: '/guide/' },
-      { text: 'Base', link: '/base/' },
-      { text: 'Github', link: 'https://zerodha.com' },
+      { text: 'Github', link: 'https://github.com/mevinoth/slim-ui' },
     ],
     sidebar: [
       {
