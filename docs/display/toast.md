@@ -70,3 +70,10 @@ export default {
 	}
 }
 </script>
+
+|  Property  |  Description  |  Type  |  Accepted values  |  Default  |
+|:------------- |:-----------|:-----:|:-------------|:-----:|
+| type | Type of toast | Function | `success`, `info`, `warning`, `error`| - |
+| message | Content of toast | String | - | - |
+| duration | Duration of the notification | String | - | 3000(ms) |
+| orientation | Position of Notification, can be like `this.$toast.TOP_RIGHT` | Object | - | - |

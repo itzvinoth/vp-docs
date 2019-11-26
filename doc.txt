@@ -52,3 +52,19 @@ i.fiveYearPercent = data[30] * 1.0;
 i.amcSipFlag = data[31] == 1;
 i.aum = data[32] * 10000000.0;
 i.manager = data[33];
+
+vinoth.me17
+Vino_94420
+no-broker: vino6520
+
+https://stackoverflow.com/questions/45639434/how-to-import-scss-file-to-app-js-parent-file-as-a-global
+
+https://github.com/vertcitron/vue-avatar-component
+https://github.com/euvl/vue-js-modal
+https://github.com/xaksis/vue-good-links
+https://xaksis.github.io/vue-good-table/guide/#installation
+https://baseweb.design/components/time-picker/
+
+
+https://dzone.com/articles/16-best-practices-for-shared-ui-libraries
+https://alligator.io/vuejs/creating-custom-plugins/

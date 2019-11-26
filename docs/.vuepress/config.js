@@ -1,6 +1,7 @@
 module.exports = {
   title: 'SUI Docs',
   description: 'Just playing around',
+  dest: 'pages',
   configureWebpack: (config, isServer) => {
     if (!isServer) {
       // mutate the config for client

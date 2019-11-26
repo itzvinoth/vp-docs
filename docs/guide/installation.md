@@ -17,7 +17,10 @@
 Install `simpleUI` with the node package manager. It can work with webpack and ES2015 very well.
 
 :::tip
-$ npm install simple-ui --save
+$ npm install slim-ui --save
+
+# Or if you prefer using yarn
+yarn add slim-ui
 :::
 
 ### Module Loader

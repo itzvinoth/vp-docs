@@ -11,12 +11,14 @@ Typical validation tasks are: <br>
     <su-switch v-model="validationView" state-on-label="Basic" state-off-label="Advance" state-on="BASIC" state-off="ADVANCE"></su-switch>
 </div>
 
+<br>
+
 <div v-if="validationView === 'BASIC'">
 
 ```vue
 <su-form @submit.prevent="doProceed" ref="contactForm">
-    <su-input type="text" v-model="firstname" static-label no-error label="First name" placeholder="Enter first name" :rules="fnRules"></su-input>
-    <su-input type="text" v-model="lastname" static-label no-error label="Last name" placeholder="Enter last name" :rules="lnRules"></su-input>
+    <su-input type="text" :rules="fnRules" v-model="firstname" static-label no-error label="First name" placeholder="Enter first name"></su-input>
+    <su-input type="text" :rules="lnRules" v-model="lastname" static-label no-error label="Last name" placeholder="Enter last name"></su-input>
 
     <su-button class="button button-blue" type="submit">Next</su-button>
 </su-form>
@@ -50,8 +52,8 @@ export default {
 
 ```vue
 <su-form @submit.prevent="doProceed" ref="contactForm">
-    <su-input type="text" v-model="user" static-label no-error label="User ID" placeholder="Enter user id" :rules="userRules"></su-input>
-    <su-input type="number" v-model="mobile" hide-spinner static-label no-error label="Phone no" placeholder="Enter phone no" :rules="mobileRules"></su-input>
+    <su-input type="text" :rules="userRules" v-model="user" static-label no-error label="User ID" placeholder="Enter user id"></su-input>
+    <su-input type="number" :rules="mobileRules" v-model="mobile" hide-spinner static-label no-error label="Phone no" placeholder="Enter phone no"></su-input>
 
     <su-button class="button button-blue" type="submit">Next</su-button>
 </su-form>
@@ -163,36 +165,3 @@ export default {
     }
 }
 </script>
-<!-- <su-form @submit.prevent="doProceed" ref="contactForm">
-    <div>
-        <su-input type="text" v-model="user" placeholder="Enter user ID" static-label no-error label="User ID" :rules="userRules"></su-input>
-        <su-input type="number" v-model="mobile" hide-spinner static-label no-error label="Phone no" placeholder="Enter phone number" :rules="mobileRules"></su-input>
-    </div>
-    <su-button class="button button-blue" type="submit">Next</su-button>
-</su-form> -->
-
-<!-- <script>
-import Vue from 'vue'
-export default {
-    data: function () {
-        return {
-            user: '',
-            mobile: '',
-            userRules: [
-                { validator: lengthValidator, min: 6 }
-            ],
-            mobileRules: [
-                { required: true, message: "Please enter your mobile no." }
-            ],
-            validationView: 'BASIC'
-        }
-    },
-    methods: {
-        doProceed () {
-            if (!this.$refs["contactForm"].validate()) {
-                return
-            }
-        }
-    }
-}
-</script> -->
