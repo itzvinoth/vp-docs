@@ -14,4 +14,3 @@ export default class Events {
         return this.eventBus.$off(name, callback);
     }
 }
-

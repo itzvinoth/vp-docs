@@ -11,8 +11,9 @@
         "vuepress-plugin-element-tabs": "^0.1.8"
     },
     "dependencies": {
+        "@htoniv/tiny-tabs": "^1.0.1",
         "v-tooltip": "^2.0.2",
-        "vue-bytesize-icons": "^0.1.1",
-        "@htoniv/tiny-tabs": "^1.0.1"
+        "vue-awesome": "^4.0.2",
+        "vue-bytesize-icons": "^0.1.1"
     }
 }

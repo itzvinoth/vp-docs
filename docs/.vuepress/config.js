@@ -62,6 +62,7 @@ module.exports = {
               '/display/modal',
               '/display/tabs',
               '/display/toast',
+              '/display/multiselect'
             ]
           },
           {
