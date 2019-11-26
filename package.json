@@ -12,6 +12,7 @@
     },
     "dependencies": {
         "v-tooltip": "^2.0.2",
-        "vue-bytesize-icons": "^0.1.1"
+        "vue-bytesize-icons": "^0.1.1",
+        "@htoniv/tiny-tabs": "^1.0.1"
     }
 }

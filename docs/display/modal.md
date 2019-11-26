@@ -31,7 +31,6 @@ When requiring users to interact with the application, but without jumping to a 
 </div>
 
 <script>
-import Vue from 'vue'
 export default {
     data () {
         return {

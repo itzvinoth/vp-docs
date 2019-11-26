@@ -6,7 +6,7 @@
 .data-table tr:nth-child(2n) {
     background-color: #FFF !important;
 }
-.language-bash.extra-class, .language-html.extra-class, .language-vue.extra-class, .language-json.extra-class, .language-template.extra-class {
+.language-js.extra-class, .language-css.extra-class, .language-bash.extra-class, .language-html.extra-class, .language-vue.extra-class, .language-json.extra-class, .language-template.extra-class {
     background-color: #f9f9f9;
 }
 .theme-default-content pre code, .theme-default-content pre[class="language-html, language-vue"] code {

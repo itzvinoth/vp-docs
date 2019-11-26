@@ -23,7 +23,7 @@ There are many parameters we use in our table
 :::: tabs
 ::: tab template
 
-```vue
+```html
 <div>
 	<DataTable :headers="dataHoldingsHeader" :data="dataHoldings">
 		<template slot-scope="props">
