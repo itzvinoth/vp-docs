@@ -3,6 +3,9 @@
     padding: 2rem 4.5rem 2rem 2rem !important;
     box-sizing: border-box;
 }
+.data-table tr:nth-child(2n) {
+    background-color: #FFF !important;
+}
 .language-bash.extra-class, .language-html.extra-class, .language-vue.extra-class, .language-json.extra-class, .language-template.extra-class {
     background-color: #f9f9f9;
 }
