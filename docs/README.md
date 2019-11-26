@@ -1,7 +1,7 @@
 ---
 home: true
 <!-- heroImage: logo.svg -->
-heroText: Simple UI
+heroText: Slim UI
 tagline: Minimal UI components based on Vue.js
 actionText: Get Started →
 actionLink: /guide/
