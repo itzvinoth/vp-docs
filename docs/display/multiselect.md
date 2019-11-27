@@ -1,4 +1,5 @@
-# Multi Select
+
+## Multi Select
 
 <div>
     <su-multi-select :options="options" :selected-values="selectedValues" width="350" track-by="name" label="label"></su-multi-select>
