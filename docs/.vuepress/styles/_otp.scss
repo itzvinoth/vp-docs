@@ -1,0 +1,10 @@
+#otp-box .otp-input.su-input-group {
+  display: inline-block;
+}
+.otp-input::placeholder {
+  font-size: 12px;
+}
+#otp-box input {
+  width: 32px !important;
+  text-align: center;
+}

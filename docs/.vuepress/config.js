@@ -46,6 +46,7 @@ module.exports = {
               '/data-entry/radio',
               '/data-entry/checkbox',
               '/data-entry/switch',
+              '/data-entry/otp'
             ]
           },
         ]

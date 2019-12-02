@@ -8,7 +8,7 @@
 					<span class="close" @click="clearItem($event, data)">&times;</span>
 				</li>
                 <li class="multiselect__tag">
-                    <input type="text" class="search" ref="listsearch" v-model="search" @focus="onFocus" @keydown="keyMonitor"></input>
+                    <input type="text" class="search" ref="listsearch" :placeholder="placeHolder" v-model="search" @focus="onFocus" @keydown="keyMonitor"></input>
                 </li>
             </ul>
         </div>
@@ -21,12 +21,13 @@
 <script>
 export default {
 	name: 'su-multi-select',
-	data () {
+	data (props) {
 		return {
 			showLabels: false,
 			search: '',
 			currItem: 1,
-			divHeight: 0
+            divHeight: 0,
+            placeHolder: props.placeholder
 		}
 	},
 	props: {
@@ -49,7 +50,11 @@ export default {
 		selectedValues: {
 			type: [Object, Array],
 			required: false
-		}
+        },
+        placeholder: {
+            type: String,
+            required: false
+        }
     },
     // if any values list of objects present in selected values, then those values are selected..
 	beforeMount () {
@@ -64,9 +69,11 @@ export default {
 		})
 	},
 	created () {
-		this.heightChange()
+        this.heightChange()
 	},
 	updated () {
+        console.log(this.$props.placeholder)
+        this.placeHolder = (this.selectedValues.length > 0) ? '' : this.$props.placeholder
 		this.heightChange()
 	},
 	mounted () {
@@ -232,6 +239,7 @@ export default {
 	color: #c0f0e1;
 }
 ul.multiselect__tags {
+    width: 100%;
 	list-style-type: none;
 	padding: 0;
 	display: inline-block;
@@ -279,7 +287,7 @@ li.multiselect__tag {
 }
 input.search {
 	border: 0;
-	width: 65px;
+	width: 100%;
 	&:focus {
 		outline: none;
 	}

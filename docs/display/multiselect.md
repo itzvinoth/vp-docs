@@ -2,7 +2,7 @@
 ## Multi Select
 
 <div>
-    <su-multi-select :options="options" :selected-values="selectedValues" width="350" track-by="name" label="label"></su-multi-select>
+    <su-multi-select :options="options" :selected-values="selectedValues" placeholder="placeholder text goes here" width="350" track-by="name" label="label"></su-multi-select>
 </div>
 
 <script>
