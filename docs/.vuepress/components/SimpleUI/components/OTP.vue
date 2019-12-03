@@ -1,6 +1,6 @@
 <template>
   <div id="otp-box" v-on:keyup="queryForKeywords" contenteditable="false" @paste="getPastedValue">
-    <input v-for="n in otplen" type="text" placeholder="○" v-model="inputs[n]" :name="'in'+n" maxlength="1" class="otp-input">
+    <input v-for="n in otplength" type="text" placeholder="○" v-model="otpvalues[n-1]" :name="'in'+n" maxlength="1" class="otp-input">
     <!-- <input type="text" placeholder="○" name="in1" v-model="in1" maxlength="1" class="otp-input"/>-->
   </div>
 </template>
@@ -21,8 +21,8 @@ export default {
   },
   data () {
     return {
-      otplen: this.otpLength,
-      inputs: this.otpValues
+      otplength: this.otpLength,
+      otpvalues: this.otpValues
     }
   },
   mounted () {

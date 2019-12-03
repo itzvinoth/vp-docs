@@ -1,7 +1,7 @@
 ## OTP
 
 ```vue
-<su-otp></su-otp>
+<su-otp :otp-length="otpLength" :otp-values="otpValues" @update-otp="updateOtp"></su-otp>
 ```
 
 <br>
@@ -17,8 +17,8 @@ export default {
     }
   },
   methods: {
-    updateOtp (e) {
-      console.log('e: ', e)
+    updateOtp (val) {
+      console.log('val: ', val)
     }
   }
 }
