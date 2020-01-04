@@ -29,7 +29,6 @@ export default {
     // create mouseup event for all child input elements...
     let inputFields = document.querySelectorAll(".otp-input")
     for (var i=0; i<inputFields.length; i++) {
-      // inputFields[i].addEventListener('mouseup', this.onMouseUp)
       inputFields[i].addEventListener('keypress', this.isNumber)
       inputFields[i].addEventListener('focus', this.onFocus)
       inputFields[i].addEventListener('blur', this.onBlur)
@@ -70,7 +69,6 @@ export default {
         }
       }
       this.$emit('update-otp', otpValues)
-      console.log(otpValues)
       // if (childNodeValues.length === 4) {
       //   document.activeElement.blur()
       // }

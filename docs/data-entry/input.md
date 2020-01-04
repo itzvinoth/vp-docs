@@ -5,20 +5,6 @@
 Input component. `su-input`
 </div>
 
-<div v-if="propertyInput === 'basic'">
-
-#### Basic
-
-A basic input field, if `static-label` present, then the label is statically fixed on top of the input field.
-
-```html
-<su-input type="text" v-model="name" placeholder="Enter your name"></su-input>
-```
-
-<su-input type="text" v-model="name" placeholder="Enter your name"></su-input>
-<br>
-</div>
-
 <div v-if="propertyInput === 'autofocus'">
 
 #### Auto focus
@@ -56,20 +42,6 @@ If `dynamic-label` present, then the animated label appears.
 <su-input type="text" v-model="mname" dynamic-label label="Father name" placeholder="Father name"></su-input>
 ```
 <su-input type="text" v-model="mname" dynamic-label label="Father name" placeholder="Father name"></su-input>
-<br>
-</div>
-
-<div v-if="propertyInput === 'maxlength'">
-
-#### Maximum length
-
-Specifies the maximum number of characters that can be entered in a text-type input.
-
-```html
-<su-input type="text" v-model="maxLen" :maxlength=6 static-label label="Maximum length"></su-input>
-```
-
-<su-input type="text" v-model="maxLen" :maxlength=6 static-label label="Maximum length"></su-input>
 <br>
 </div>
 
@@ -132,8 +104,6 @@ In some use cases number field spinner looks ugly. For that case include `hide-s
 
 | |  Property  |  Description  |  Type  |  Accepted values  |  Default  |
 | -|:------------- |:-----------|:-----:|:-------------|:-----:|
-| <su-radio-group v-model="propertyInput"><su-radio value="basic"> </su-radio></su-radio-group> | type, id, name, placeholder | same as like in native input | String | - | - |
-| <su-radio-group v-model="propertyInput"><su-radio value="maxlength"> </su-radio></su-radio-group> | maxlength | Specifies max number of characters can be entered in a text-input field | Number | - | - |
 | <su-radio-group v-model="propertyInput"><su-radio value="staticlabel"> </su-radio></su-radio-group> | static-label | Label text for the input field | Boolean | - | - |
 | <su-radio-group v-model="propertyInput"><su-radio value="dynamiclabel"> </su-radio></su-radio-group> | dynamic-label | Animated label text appears for the input field | Boolean | - | - |
 | <su-radio-group v-model="propertyInput"><su-radio value="autofocus"> </su-radio></su-radio-group> | autofocus | same as like in native input | Boolean | - | - |
@@ -148,7 +118,7 @@ import Vue from 'vue'
 export default {
 	data: function () {
 		return {
-			propertyInput: 'basic',
+			propertyInput: 'staticlabel',
 			name: 'Bob',
 			age: 30,
 			fname: '',

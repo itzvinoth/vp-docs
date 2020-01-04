@@ -4,6 +4,21 @@
 <su-otp :otp-length="otpLength" :otp-values="otpValues" @update-otp="updateOtp"></su-otp>
 ```
 
+```js
+export default {
+	data () {
+    return {
+      otpLength: 5,
+      otpValues: []
+    }
+  },
+  methods: {
+    updateOtp (val) {
+      console.log('val: ', val)
+    }
+  }
+}
+```
 <br>
 <su-otp :otp-length="otpLength" :otp-values="otpValues" @update-otp="updateOtp"></su-otp>
 
