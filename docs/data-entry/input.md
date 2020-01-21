@@ -45,6 +45,17 @@ If `dynamic-label` present, then the animated label appears.
 <br>
 </div>
 
+<div v-if="propertyInput === 'disabled'">
+
+#### Input disable
+
+```html
+<su-input type="text" v-model="mname" static-label label="Father name" :disabled="disabled"></su-input>
+```
+<su-input type="text" v-model="mname" static-label label="Father name" :disabled="disabled"></su-input>
+<br>
+</div>
+
 <div v-if="propertyInput === 'eventhandling'">
 
 #### Event handling
@@ -106,6 +117,7 @@ In some use cases number field spinner looks ugly. For that case include `hide-s
 | -|:------------- |:-----------|:-----:|:-------------|:-----:|
 | <su-radio-group v-model="propertyInput"><su-radio value="staticlabel"> </su-radio></su-radio-group> | static-label | Label text for the input field | Boolean | - | - |
 | <su-radio-group v-model="propertyInput"><su-radio value="dynamiclabel"> </su-radio></su-radio-group> | dynamic-label | Animated label text appears for the input field | Boolean | - | - |
+| <su-radio-group v-model="propertyInput"><su-radio value="disabled"> </su-radio></su-radio-group> | disabled | Use as attribute or pass value | Boolean | - | - |
 | <su-radio-group v-model="propertyInput"><su-radio value="autofocus"> </su-radio></su-radio-group> | autofocus | same as like in native input | Boolean | - | - |
 | <su-radio-group v-model="propertyInput"><su-radio value="eventhandling"> </su-radio></su-radio-group> | `@focus`, `@blur`, `@input` |  |  | - | - |
 | <su-radio-group v-model="propertyInput"><su-radio value="minmax"> </su-radio></su-radio-group> | min & max | Supports the range by `min` and `max` | Number | - | - |
@@ -123,12 +135,13 @@ export default {
 			age: 30,
 			fname: '',
 			mname: '',
+			disabled: true,
 			afocus: '',
 			maxLen: 'WX9090',
 			volumn: 28,
 			username: '',
 			nospin: 0,
-			pin: 123456
+			pin: 123456,
 		}
 	},
 	methods: {

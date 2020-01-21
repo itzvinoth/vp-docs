@@ -51,6 +51,14 @@
 	.su-dynamic-label {
 		@extend .text-xsmall;
 	}
+	.su-input-label.su-dynamic-label {
+		z-index: 5;
+		position: absolute;
+		top: -2px;
+		background: #fff;
+		padding: 0 5px;
+		margin-left: 10px;
+	}
 
 	&.su-static-label .su-input-label {
 		visibility: visible;
