@@ -1,5 +1,6 @@
 <template>
 	<div :class="classes">
+
 		<label v-if="this.staticLabel || this.animate" :class="labelClasses">{{ currentLabel }}</label>
 
 		<input :type="type" ref="input" v-bind="$props" :placeholder="currentPlaceholder"
