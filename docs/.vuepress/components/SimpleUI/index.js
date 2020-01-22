@@ -8,7 +8,6 @@ import Switch from "./components/Switch"
 import Loader from "./components/Loader"
 import Modal from "./components/Modal"
 import Toast from "./components/Toast.vue"
-import Select from "./components/Select.vue"
 import RadioGroup from "./components/RadioGroup"
 import TinyTabs from "./components/TinyTabs"
 import MultiSelect from "./components/MultiSelect"
@@ -35,7 +34,6 @@ SimpleUI.install = function (Vue, options) {
 	Vue.component("su-otp", OTP)
 	// Vue.component("su-avatar", Avatar)
 	Vue.component("su-multi-select", MultiSelect)
-	Vue.component("su-select", Select)
 	Vue.component("su-table", DataTable)
 	// Vue.directive("tooltip", tooltip)
 }

@@ -674,6 +674,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@htoniv/tiny-tabs@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@htoniv/tiny-tabs/-/tiny-tabs-1.0.2.tgz#4b2aaec0b72d83df2d86455803014fbb1143b762"
+  integrity sha512-FiJsGrRtIYvgPpTe5eKD9hQaQ/o7K3GqMjOMbcxRYI4ddfxwwZJ4U2QDpQjK2xDMVNpq88dNMVxEL2U57zdA+w==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -4832,6 +4837,11 @@ nan@^2.12.1, nan@^2.13.2:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
   integrity sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
 
+nanoid@^2.1.6:
+  version "2.1.9"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-2.1.9.tgz#edc71de7b16fc367bbb447c7a638ccebe07a17a1"
+  integrity sha512-J2X7aUpdmTlkAuSe9WaQ5DsTZZPW1r/zmEWKsGhbADO6Gm9FMd2ZzJ8NhsmP4OtA9oFhXfxNqPlreHEDOGB4sg==
+
 nanomatch@^1.2.9:
   version "1.2.13"
   resolved "https://registry.yarnpkg.com/nanomatch/-/nanomatch-1.2.13.tgz#b87a8aa4fc0de8fe6be88895b38983ff265bd119"
@@ -7525,6 +7535,13 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
+vue-awesome@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/vue-awesome/-/vue-awesome-4.0.2.tgz#20b65f24486698e82599cf804d12d98300434000"
+  integrity sha512-TE9hVwyVrGnBetO/MJwZ/7qLO6Vgr/WrDtIA7vwNryoLdA2jfRcKRw29KacpU5xj3wzZhHfYJ2xJLxfirhmH5Q==
+  dependencies:
+    nanoid "^2.1.6"
+
 vue-bytesize-icons@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/vue-bytesize-icons/-/vue-bytesize-icons-0.1.1.tgz#0308e01d0a23d181f0228b223c44134b8e722a61"
@@ -7610,6 +7627,11 @@ vuepress-html-webpack-plugin@^3.2.0:
     tapable "^1.0.0"
     toposort "^1.0.0"
     util.promisify "1.0.0"
+
+vuepress-plugin-code-copy@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-code-copy/-/vuepress-plugin-code-copy-1.0.4.tgz#14da382d4e0f973bb20422483ed9349ea62834bf"
+  integrity sha512-8tERv9oB2kgRz0kdBTLaH+DM36TfcRjwPO5pFXWuDDm8ACcXebZMMnL0PTda7NrZ2wnOTAjWxDlQioIDrD6Q9g==
 
 vuepress-plugin-container@^2.0.2:
   version "2.1.0"

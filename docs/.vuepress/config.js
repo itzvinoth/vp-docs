@@ -42,7 +42,6 @@ module.exports = {
             children: [
               '/data-entry/input',
               '/data-entry/form',
-              '/data-entry/select',
               '/data-entry/radio',
               '/data-entry/checkbox',
               '/data-entry/switch',
