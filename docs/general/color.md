@@ -18,7 +18,6 @@ SimpleUI use the safe blue colors as the primary colors, among which the Light P
       <div class="color-name">{{ colors[(c*2)+1].name }}</div>
       <div>{{ colors[(c*2)+1].code }}</div>
     </div>
-
   </div>
 </div>
 
@@ -28,7 +27,7 @@ export default {
   data () {
     return {
       msg: 'hello worldldldldld',
-      total: 15,
+      total: 19,
       colors: [{
         'name': '$color-solid-white',
         'code': '#ffffff'
@@ -64,7 +63,7 @@ export default {
         'code': '#10b983'
       }, {
         'name': '$chart-green',
-        'code': 'rgb(75, 192, 192)'
+        'code': '#4bc0c0'
       },{
         'name': '$color-tundora-grey',
         'code': '#4a4a4a'
@@ -100,7 +99,7 @@ export default {
         'code': '#DDDDDD'
       }, {
         'name': '$chart-grey',
-        'code': 'rgb(201, 203, 207)'
+        'code': '#c9cbcf'
       }, {
         'name': '$color-lemon-yellow',
         'code': '#fffacd'
@@ -109,7 +108,7 @@ export default {
         'code': '#fed51c'
       }, {
         'name': '$chart-yellow',
-        'code': 'rgb(255, 205, 86)'
+        'code': '#ffcd56'
       }, {
         'name': '$color-solid-amber',
         'code': '#FF8F00'
@@ -121,7 +120,7 @@ export default {
         'code': '#f8ab00'
       }, {
         'name': '$chart-orange',
-        'code': 'rgb(255, 159, 64)'
+        'code': '#ff9f40'
       }, {
         'name': '$color-pomegranate-red',
         'code': '#f6461a'
@@ -134,6 +133,21 @@ export default {
       }, {
         'name': '$chart-red',
         'code': 'rgb(255, 99, 132)'
+      }, {
+        'name': '$color-french-rose',
+        'code': '#EC407A'
+      }, {
+        'name': '$chart-purple',
+        'code': 'rgb(153, 102, 255)'
+      }, {
+        'name': '$color-solid-teal',
+        'code': '#009688'
+      }, {
+        'name': '$color-solid-indigo',
+        'code': '#673AB7'
+      }, {
+        'name': '$color-solid-black',
+        'code': '#000000'
       }]
     }
   }
