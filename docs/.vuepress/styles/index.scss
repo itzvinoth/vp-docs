@@ -20,6 +20,20 @@ html, body {
 }
 div:focus {outline:0;}
 
+.color-circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}
+.color-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
 @import "_colors.scss";
 @import "_helpers.scss";
 @import "_animate.scss";
