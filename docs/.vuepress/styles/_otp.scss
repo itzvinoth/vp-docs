@@ -5,6 +5,7 @@
   font-size: 12px;
 }
 #otp-box input {
-  width: 32px !important;
   text-align: center;
+  height: 100%;
+  box-sizing: border-box;
 }

@@ -1,7 +1,7 @@
 ## OTP
 
 ```vue
-<su-otp :otp-length="otpLength" :otp-values="otpValues" @update-otp="updateOtp"></su-otp>
+<su-otp :otp-length="otpLength" :otp-values="otpValues" box-height="32" box-width="36" @update-otp="updateOtp"></su-otp>
 ```
 
 ```js
@@ -20,7 +20,7 @@ export default {
 }
 ```
 <br>
-<su-otp :otp-length="otpLength" :otp-values="otpValues" @update-otp="updateOtp"></su-otp>
+<su-otp :otp-length="otpLength" :otp-values="otpValues" box-height="32" box-width="36" @update-otp="updateOtp"></su-otp>
 
 <script>
 import Vue from 'vue'

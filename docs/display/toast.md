@@ -33,12 +33,6 @@ export default {
 </script>
 ```
 
-<br>
-<su-button class="button button-blue" @click.native="successToast">Open success toast</su-button><br><br>
-<su-button class="button button-blue" @click.native="infoToast">Open info toast</su-button><br><br>
-<su-button class="button button-blue" @click.native="warningToast">Open warning toast</su-button><br><br>
-<su-button class="button button-blue" @click.native="errorToast">Open error toast</su-button>
-
 <script>
 import Vue from 'vue'
 export default {
@@ -71,9 +65,31 @@ export default {
 }
 </script>
 
+<br>
+<div class="container">
+  <div class="row">
+		<div class="three columns">
+			<su-button class="button button-green" @click.native="successToast">success</su-button>
+		</div>
+		<div class="three columns">
+			<su-button class="button button-blue" @click.native="infoToast">info</su-button>
+		</div>
+		<div class="three columns">
+			<su-button class="button button-yellow" @click.native="warningToast">warning</su-button>
+		</div>
+		<div class="three columns">
+			<su-button class="button button-orange" @click.native="errorToast">error</su-button>
+		</div>
+	</div>
+</div>
+<br><br><br><br>
+
 |  Property  |  Description  |  Type  |  Accepted values  |  Default  |
 |:------------- |:-----------|:-----:|:-------------|:-----:|
 | type | Type of toast | Function | `success`, `info`, `warning`, `error`| - |
 | message | Content of toast | String | - | - |
 | duration | Duration of the notification | String | - | 3000(ms) |
 | orientation | Position of Notification, can be like `this.$toast.TOP_RIGHT` | Object | - | - |
+
+
+<style src="../.vuepress/styles/grid.css" scoped></style>

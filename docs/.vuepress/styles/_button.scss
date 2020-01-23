@@ -60,6 +60,26 @@ button {
 
 	}
 
+	&.button-yellow {
+		color: $color-solid-white;
+		background: $color-solid-amber;
+		border-color: $color-solid-amber;
+
+		&.button-outline {
+			color: $color-solid-amber;
+			background: $color-solid-white;
+			border-color: $color-solid-amber;
+
+			&:hover {
+				opacity: 1;
+				color: $color-solid-white;
+				background: $color-solid-amber;
+				border-color: $color-solid-amber;
+			}
+		}
+
+	}
+
 	&.button-blue {
 		color: $color-solid-white;
 		background: $color-havelock-blue;
