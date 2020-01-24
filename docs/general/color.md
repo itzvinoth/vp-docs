@@ -2,10 +2,7 @@
 
 SimpleUI recommends to use the colors of the palette below as the rule for design and development for ensuring the visual consistence among the pages and components.
 
-### Primary Colors
-SimpleUI use the safe blue colors as the primary colors, among which the Light Primary is usually used for hover state while the Dark Primary for active.
-
-
+<hr/>
 <div class="container">
   <div class="row" v-for="c in total">
     <div class="six columns">
@@ -26,7 +23,6 @@ export default {
   name: 'colormd',
   data () {
     return {
-      msg: 'hello worldldldldld',
       total: 19,
       colors: [{
         'name': '$color-solid-white',
@@ -41,13 +37,13 @@ export default {
         'name': '$color-kite-blue',
         'code': '#0059c1'
       }, {
-        'name': '$color-havelock-blue',
+        'name': '$chart-blue',
         'code': '#387ed1'
       }, {
         'name': '$color-lochmara-blue',
         'code': '#0089D0'
       }, {
-        'name': '$chart-blue',
+        'name': '$color-havelock-blue',
         'code': '#387ed1'
       }, {
         'name': '$color-dodger-aqua',
@@ -64,42 +60,42 @@ export default {
       }, {
         'name': '$chart-green',
         'code': '#4bc0c0'
-      },{
+      }, {
+        'name': '$color-solid-grey',
+        'code': '#444444'
+      }, {
         'name': '$color-tundora-grey',
         'code': '#4a4a4a'
+      }, {
+        'name': '$color-dove-grey',
+        'code': '#666666'
       }, {
         'name': '$color-dusty-grey',
         'code': '#9b9b9b'
       }, {
-        'name': '$color-mercury-grey',
-        'code': '#e3e3e3'
-      },{
+        'name': '$color-silver-grey',
+        'code': '#cccccc'
+      }, {
+        'name': '$chart-grey',
+        'code': '#c9cbcf'
+      }, {
+        'name': '$color-alto-grey',
+        'code': '#DDDDDD'
+      }, {
         'name': '$color-border-grey',
         'code': '#e1e1e1'
       }, {
+        'name': '$color-mercury-grey',
+        'code': '#e3e3e3'
+      },  {
         'name': '$color-gallery-grey',
         'code': '#eeeeee'
-      }, {
-        'name': '$color-silver-grey',
-        'code': '#cccccc'
       }, {
         'name': '$color-wild-sand-grey',
         'code': '#f4f4f4'
       }, {
         'name': '$color-athens-grey',
         'code': '#fafafb'
-      }, {
-        'name': '$color-dove-grey',
-        'code': '#666666'
-      }, {
-        'name': '$color-solid-grey',
-        'code': '#444444'
-      }, {
-        'name': '$color-alto-grey',
-        'code': '#DDDDDD'
-      }, {
-        'name': '$chart-grey',
-        'code': '#c9cbcf'
       }, {
         'name': '$color-lemon-yellow',
         'code': '#fffacd'
@@ -110,26 +106,26 @@ export default {
         'name': '$chart-yellow',
         'code': '#ffcd56'
       }, {
-        'name': '$color-solid-amber',
-        'code': '#FF8F00'
-      }, {
-        'name': '$color-solid-orange',
-        'code': '#ff5722'
-      }, {
         'name': '$color-light-orange',
         'code': '#f8ab00'
       }, {
         'name': '$chart-orange',
         'code': '#ff9f40'
       }, {
+        'name': '$color-solid-amber',
+        'code': '#FF8F00'
+      }, {
+        'name': '$color-solid-orange',
+        'code': '#ff5722'
+      }, {
         'name': '$color-pomegranate-red',
         'code': '#f6461a'
       }, {
-        'name': '$color-wellread-red',
-        'code': '#B73737'
-      }, {
         'name': '$color-profit-red',
         'code': '#f35631'
+      }, {
+        'name': '$color-wellread-red',
+        'code': '#B73737'
       }, {
         'name': '$chart-red',
         'code': 'rgb(255, 99, 132)'
@@ -140,11 +136,11 @@ export default {
         'name': '$chart-purple',
         'code': 'rgb(153, 102, 255)'
       }, {
-        'name': '$color-solid-teal',
-        'code': '#009688'
-      }, {
         'name': '$color-solid-indigo',
         'code': '#673AB7'
+      }, {
+        'name': '$color-solid-teal',
+        'code': '#009688'
       }, {
         'name': '$color-solid-black',
         'code': '#000000'
@@ -154,21 +150,14 @@ export default {
 }
 </script>
 
-<!--
-$color-french-rose: #EC407A;
-$chart-purple: rgb(153, 102, 255);
-
-$color-solid-teal: #009688;
-$color-solid-indigo: #673AB7;
-$color-solid-black: #000000; -->
-
-
-
 ### Secondary Colors
 
 ### Neutral Colors
 <style src="../.vuepress/styles/grid.css" scoped></style>
 <style>
+.container {
+  padding-top: 25px !important;
+}
 .container .row .six.columns {
   padding-bottom: 20px;
 }
