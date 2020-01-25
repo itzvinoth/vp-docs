@@ -60,8 +60,8 @@ module.exports = {
             collapsable: false,
             children: [
               '/display/modal',
-              '/display/tabs',
               '/display/toast',
+              '/display/tabs',
               '/display/multiselect'
             ]
           },

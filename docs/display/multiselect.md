@@ -2,7 +2,7 @@
 ## Multi Select
 
 <div>
-    <su-multi-select :options="options" :selected-values="selectedValues" placeholder="Search text here" width="350" track-by="name" label="label"></su-multi-select>
+    <su-multi-select :options="options" :selected-values="selectedValues" :width="450" :track-by="name" :label="label" :placeholder="placeholder"></su-multi-select>
 </div>
 
 <script>
@@ -22,7 +22,10 @@ export default {
         { name: 'GB', label: 'United Kingdom' },
         { name: 'US', label: 'United States' }
       ],
-      selectedValues: []
+      selectedValues: [{ name: 'MN', label: 'Mongolia' }],
+      name: 'name',
+      label: 'label',
+      placeholder: 'Search your text'
     }
   },
   methods: {
@@ -36,7 +39,7 @@ export default {
 ```html
 <template>
   <div>
-    <su-multi-select :options="options" :selected-values="selectedValues" width="350" track-by="name" label="label"></su-multi-select>
+    <su-multi-select :options="options" :selected-values="selectedValues" width="350" :track-by="name" :label="label" :placeholer="placeholder"></su-multi-select>
   </div>
 </template>
 
@@ -58,9 +61,21 @@ export default {
         { name: 'US', label: 'United States' }
       ],
       // set with initial selected values as like this [{ name: 'PL', label: 'Poland' }]
-      selectedValues: []
+      selectedValues: [],
+      name: 'name',
+      label: 'label',
+      placeholder: 'Search your text'
     }
   }
 }
 </script>
 ```
+
+### Options
+| Properties   | Type   | Description  | Required  |
+|--------------|------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
+| label      | String | Will be visible in the dropdown, and selected options are visible as tags | Yes |
+| track-by      | String | Used to compare objects. Will be used only if options are objects. | Yes |
+| options    | Array   | Array of available options: `Objects`. Visible label will default to `option.label`. | Yes |
+| placeholder  | String | Same like normal `placeholder` attribute | No |
+| width  | Number | Width of the `Select` container | No |

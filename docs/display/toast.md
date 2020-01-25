@@ -13,7 +13,7 @@ used in the following cases:
 
 > A notification that is pushed by the application.
 
-Example
+### Usage
 ```vue
 <template>
 	<su-button class="button button-blue" @click.native="successToast">Open success toast</su-button>
@@ -25,7 +25,8 @@ export default {
 		successToast: function () {
 			this.$toast.success({
 				message: "I am a toast with success message",
-				orientation: this.$toast.TOP_RIGHT
+				orientation: this.$toast.TOP_RIGHT,
+				duration: 4000
 			})
 		}
 	}
@@ -93,3 +94,9 @@ export default {
 
 
 <style src="../.vuepress/styles/grid.css" scoped></style>
+<style>
+	.button {
+		padding: 10px 20px !important;
+		width: 100%;
+	}
+</style>
