@@ -1,6 +1,9 @@
 html, body {
     font-size: 16px;
 }
+.navbar {
+    z-index: 15 !important;
+}
 .theme-default-content:not(.custom), .page-nav {
     max-width: 940px !important;
     padding: 2rem 4.5rem 2rem 2rem !important;

@@ -40,11 +40,11 @@ module.exports = {
             title: 'Data entry',
             collapsable: false,
             children: [
+              '/data-entry/radio',
+              '/data-entry/switch',
               '/data-entry/input',
               '/data-entry/form',
-              '/data-entry/radio',
               '/data-entry/checkbox',
-              '/data-entry/switch',
               '/data-entry/otp'
             ]
           },

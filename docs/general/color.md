@@ -18,6 +18,7 @@ SimpleUI recommends to use the colors of the palette below as the rule for desig
   </div>
 </div>
 
+
 <script>
 export default {
   name: 'colormd',
@@ -150,9 +151,10 @@ export default {
 }
 </script>
 
-### Secondary Colors
+<br>
+<div class="hide-this">Hellomydear</div>
+<br>
 
-### Neutral Colors
 <style src="../.vuepress/styles/grid.css" scoped></style>
 <style>
 .container {
@@ -160,5 +162,8 @@ export default {
 }
 .container .row .six.columns {
   padding-bottom: 20px;
+}
+.hide-this {
+  opacity: 0.01;
 }
 </style>

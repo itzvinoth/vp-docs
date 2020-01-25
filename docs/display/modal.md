@@ -51,3 +51,32 @@ export default {
     }
 }
 </script>
+
+### Props
+`@close` - Used to close popup when clicked outside of the modal
+
+### Slots
+`header` - Used for to update the title of the modal<br/>
+`body` - Used for the main content section of the modal<br/>
+`footer` - The slot which contains the action buttons. Use this to replace the buttons<br/>
+
+### Usage
+```vue
+<div>
+    <su-modal v-if="showModal" @close="hideModalPopup()">
+        <h2 slot="header">Modal header</h2>
+        <div slot="body">
+            <span>Modal content goes here</span><br><br>
+            <span>Modal content goes here</span>
+        </div>
+        <div slot="footer" class="actions">
+            <su-button class="button-blue" @click.native="continueAction">
+                <span>Continue</span>
+            </su-button>
+            <su-button class="button-outline" @click.native="hideModalPopup">
+                <span>Cancel</span>
+            </su-button>
+        </div>
+    </su-modal>
+</div>
+```
