@@ -2,7 +2,7 @@
 
 Exporting html table data as `.csv` file
 
->  In the `download-csv` attribute you have to mention the csv file name. In here we mentioned `table.csv`.
+>  To enable it we need to include `download-csv` attribute and to mention the csv file name. In here we mentioned `table.csv`.
 
 ### Usage
 ```vue

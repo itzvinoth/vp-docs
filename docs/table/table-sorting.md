@@ -1,5 +1,48 @@
 ## Sorting
 
+Enable sorting for columns by setting the `sort` attribute.
+
+```vue
+<su-table :headers="dataHoldingsHeader" :data="dataHoldings" sort>
+...
+</su-table>
+```
+
+### Sort related props
+
+We can add below props to enable sorting on any column.
+
+|  Property  |  Description  |  Type  |  Default  |
+| ------------- | ------------- |:-----:| -----:|
+|  sort  | To enable sorting on any column  |  Boolean  |  false  |
+|  sortArrow  | Use up or down arrow to represent "sort ascending or descending" at table header  |  Boolean  |  false  |
+|  arrowShowDefault  | Arrow to show default or else it shows on mouseover |  Boolean  |  false  |
+
+
+```js
+let dataHoldingsHeader = [{
+  // Here enabled sorting on tradingsymbol column only
+  class: [],
+  label: "Symbol",
+  field: "tradingsymbol",
+  sort: true,
+  sortArrow: true,
+  arrowShowDefault: true
+}, {
+  class: [],
+  label: "Max available (₹)",
+  field: "collateral_value"
+}, {
+  class: [],
+  label: "Pledge Qty",
+  field: "pledge_qty"
+}, {
+  class: [],
+  label: "Amount required (₹)",
+  field: "loan_value"
+}]
+```
+
 ```vue
 <div>
   <su-table :headers="dataHoldingsHeader" :data="dataHoldings" sort>
@@ -37,7 +80,6 @@ export default {
 </script>
 ```
 
-<!-- <NumberModifier :start="5"></NumberModifier> -->
 <div>
   <su-table :headers="dataHoldingsHeader" :data="dataHoldings" sort>
     <template slot-scope="props">
@@ -71,14 +113,12 @@ export default {
         label: "Symbol",
         field: "tradingsymbol",
         sort: true,
-        tableBorder: true,
         sortArrow: true,
         arrowShowDefault: true
       }, {
         class: [],
         label: "Max available (₹)",
-        field: "collateral_value",
-        tableBorder: false
+        field: "collateral_value"
       }, {
         class: [],
         label: "Pledge Qty",

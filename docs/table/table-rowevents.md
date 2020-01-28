@@ -6,7 +6,7 @@ When you want to work with row events you need to enable `row-events`. That will
 ```vue
 <template>
   <div>
-    <su-table :headers="dataHoldingsHeader" :data="dataHoldings" row-events @rowEnter="onRowEnter" @rowLeave="onRowLeave" @rowClick="onRowClick" @rowKeyDown="onRowKeyDown">
+    <su-table :headers="dataHoldingsHeader" :data="dataHoldings" row-events @rowEnter="onRowEnter" @rowLeave="onRowLeave" @rowClick="onRowClick">
       <template slot-scope="props">
         <td>
           {{ props.row.tradingsymbol }}
@@ -46,9 +46,6 @@ export default {
     },
     onRowClick ({ row }) {
       console.log('get row details on mouse click ', row)
-    },
-    onRowKeyDown ({ row }) {
-      console.log('row key down')
     }
   },
 }
@@ -56,7 +53,7 @@ export default {
 ```
 
 <div>
-  <su-table :headers="dataHoldingsHeader" :data="dataHoldings" row-events @rowEnter="onRowEnter" @rowLeave="onRowLeave" @rowClick="onRowClick" @rowKeyDown="onRowKeyDown">
+  <su-table :headers="dataHoldingsHeader" :data="dataHoldings" row-events @rowEnter="onRowEnter" @rowLeave="onRowLeave" @rowClick="onRowClick">
     <template slot-scope="props">
       <td>
         {{ props.row.tradingsymbol }}
@@ -150,9 +147,6 @@ export default {
     },
     onRowClick ({ row }) {
       console.log('row click')
-    },
-    onRowKeyDown ({ row }) {
-      console.log('row key down')
     }
   }
 }

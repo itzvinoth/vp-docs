@@ -16,9 +16,6 @@ There are many parameters we use in our table
 | rowLeave | This event occurs when the mouse pointer is moved out of an row element in the table. | Function | |
 | rowClick | This event occurs when clicks on the row element in the table. | Function | |
 | selected | Rows can be selectable by making first column as a selectable column | Function | |
-| rowKeyDown | | | |
-| focus | | | |
-| toolbar | | | |
 
 
 :::: tabs
@@ -110,11 +107,7 @@ var data = [{
 var headers = [{
   "class": [],
   "label": "Symbol",
-  "field": "tradingsymbol",
-  "sort": true,
-  "tableBorder": true,
-  "sortArrow": true,
-  "arrowShowDefault": true
+  "field": "tradingsymbol"
 }, {
   "class": [],
   "label": "Max available (₹)",

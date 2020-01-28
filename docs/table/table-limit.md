@@ -1,6 +1,6 @@
 ## Limit
 
-Limit number of displayed table rows.
+Limit number of displayed table rows. To enable it we need to add `limit` attribute with numeric value.
 
 ### Usage
 ```vue

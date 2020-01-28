@@ -73,10 +73,10 @@ module.exports = {
               '/table/table-csv',
               '/table/table-limit',
               '/table/table-sorting',
-              '/table/table-toolbar',
+              '/table/table-select',
+              // '/table/table-toolbar',
               '/table/table-rowevents',
               '/table/table-search',
-              '/table/table-select',
             ]
           },
         ]
