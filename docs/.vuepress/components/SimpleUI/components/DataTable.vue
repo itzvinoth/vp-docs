@@ -7,8 +7,6 @@
 		<div class="toolbar" v-if="toolbar">
 			<!-- Search -->
 			<span class="search" v-if="search" :class="{'expand': isSearchExpaned }">
-				<span class="icon icon-search"></span>
-				<span class="clear icon icon-times" @click="clearSerachTerm" v-show="currentSearchTerm.length > 0"></span>
 				<su-input ref="searchInput" type="search" class="search-input"
 					:maxlength="15" :animate="false" :placeholder="customSearchPlaceHolder" v-model.trim="currentSearchTerm"
 					@keyup.native.enter="doSearch(false)" @blur="onSearchBlur" @focus="onSearchFocus" @input="doDebounceFilterSearch"></su-input>
@@ -20,7 +18,7 @@
 			<!--Download csv-->
 			<span class="download">
 				<span class="download-csv link" v-if="downloadCsv" @click="doCSVDownload">
-					<span class="icon icon-download"></span>Download
+					Download
 					<a ref="csvDownloadLink" class="hide download-link" href="#"></a>
 				</span>
 			</span>
@@ -309,11 +307,6 @@ export default {
 			this.focusedRow = null
 		},
 		// ## Search
-		// Clear search term
-		clearSerachTerm () {
-			this.currentSearchTerm = ""
-			this.doSearch()
-		},
 		// Do things on search blur
 		onSearchBlur () {
 			if (!this.currentSearchTerm.length) {
@@ -482,7 +475,6 @@ export default {
 					results.push(i)
 				}
 			}
-
 			this.$emit("selected", results)
 		},
 		// LimitfindParentBySelector

@@ -1,12 +1,9 @@
-## Toolbar
+## Search
 
 ```vue
 <template>
 	<div>
-		<DataTable :headers="dataHoldingsHeader" :data="dataHoldings" toolbar="false">
-			<span slot="toolbar-before" class="toolbar-before">
-				<a rel="noopener noreferrer" target="_blank" :href="''">View Reports before</a>
-			</span>
+		<DataTable :headers="dataHoldingsHeader" :data="dataHoldings" search search-place-holder="Search trading symbol">
 			<template slot-scope="props">
 				<td>
 					{{ props.row.tradingsymbol }}
@@ -40,10 +37,7 @@ export default {
 ```
 
 <div>
-	<DataTable :headers="dataHoldingsHeader" :data="dataHoldings" toolbar="toolbar">
-		<span slot="toolbar-before" class="toolbar-before">
-			<a rel="noopener noreferrer" target="_blank" :href="''">View Reports before</a>
-		</span>
+	<DataTable :headers="dataHoldingsHeader" :data="dataHoldings" search search-place-holder="Search trading symbol">
 		<template slot-scope="props">
 			<td>
 				{{ props.row.tradingsymbol }}
@@ -73,6 +67,7 @@ export default {
 			toolbar: false,
 			dataHoldingsHeader: [{
 				class: [],
+				search: true,
 				label: "Symbol",
 				field: "tradingsymbol"
 			}, {
@@ -93,44 +88,44 @@ export default {
 				"loan_value": 253.25,
 				"quantity": 1.0,
 				"pledge_qty": 1.0,
-				"collateral_value": 127.0
+        "collateral_value": 127.0
 			}, {
 				"tradingsymbol": "UPL",
 				"loan_value": 734.85,
 				"quantity": 1.0,
 				"pledge_qty": 1.0,
-				"collateral_value": 367.0
+        "collateral_value": 367.0
 			}, {
 				"tradingsymbol": "L&TFH",
 				"loan_value": 330.9,
 				"quantity": 2.0,
 				"pledge_qty": 2.0,
-				"collateral_value": 165.0
+        "collateral_value": 165.0
 			}, {
 				"tradingsymbol": "AXISBANK",
 				"loan_value": 7011.4,
 				"quantity": 11.0,
 				"pledge_qty": 11.0,
-				"collateral_value": 3506.0
+        "collateral_value": 3506.0
 			}, {
 				"tradingsymbol": "WONDERLA",
 				"loan_value": 309.15,
 				"quantity": 1.0,
 				"pledge_qty": 1.0,
-				"collateral_value": 155.0
+        "collateral_value": 155.0
 			}, {
 				"tradingsymbol": "IDFCBANK",
 				"loan_value": 44.9,
 				"quantity": 1.0,
 				"pledge_qty": 1.0,
-				"collateral_value": 22.0
+        "collateral_value": 22.0
 			}]
 		}
 	},
 	methods: {
 		showContextMenu (row) {
 			console.log('show Context Menu', row)
-		}
+    }
 	}
 
 }

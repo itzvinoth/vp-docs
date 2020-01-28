@@ -74,6 +74,9 @@ module.exports = {
               '/table/table-limit',
               '/table/table-sorting',
               '/table/table-toolbar',
+              '/table/table-rowevents',
+              '/table/table-search',
+              '/table/table-select',
             ]
           },
         ]

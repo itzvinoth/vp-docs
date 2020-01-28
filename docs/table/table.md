@@ -6,14 +6,15 @@ There are many parameters we use in our table
 
 
 |  Property  |  Description  |  Type  |  Default  |
-| ------------- |:-------------:|:-----:| -----:|
+| ------------- | ------------- |:-----:| -----:|
 | limit | Number of rows in tables | String | empty |
 | search | searching among all the data of the table. |   Boolean |  false  |
 | data | Show data in body of the table | Array | empty |
 | headers | Show data in header of the table | Array | empty |
 | download-csv | Download table as CSV | String (csv filename) ex: table.csv |  |
-| rowEnter | | | |
-| rowLeave | | | |
+| rowEnter | This event occurs when the mouse pointer is moved onto an row element in the table. | Function | |
+| rowLeave | This event occurs when the mouse pointer is moved out of an row element in the table. | Function | |
+| rowClick | This event occurs when clicks on the row element in the table. | Function | |
 | selected | | | |
 | rowKeyDown | | | |
 | focus | | | |
@@ -47,7 +48,7 @@ There are many parameters we use in our table
 export default {
 	data () {
 		return {
-			// headers and data arrays are presented in the above
+			// headers and data arrays are presented in the json tab.
 			dataHoldingsHeader: headers,
 			dataHoldings: data
 		}

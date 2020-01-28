@@ -1,17 +1,5 @@
 # Installation
 
-### CDN
-::: tip
-```html
-<!-- import Vue.js -->
-<script src="//vuejs.org/js/vue.min.js"></script>
-<!-- import stylesheet -->
-<link rel="stylesheet" href="//unpkg.com/slim-ui/dist/styles/slimui.css">
-<!-- import iView -->
-<script src="//unpkg.com/slim-ui/dist/slimui.min.js"></script>
-```
-:::
-
 ### Node package
 
 Install `slim-ui` with the npm or yarn. It can work with webpack and ES2015 very well.
@@ -37,6 +25,22 @@ npm install --save-dev node-sass sass-loader
 yarn add -D node-sass sass-loader
 ```
 
+### Use all components
+
+```vue
+import Vue from 'vue'
+import SlimUI from 'slim-ui'
+
+Vue.use(SlimUI)
+```
+
+### Use as indiviual components
+```vue
+import Vue from 'vue'
+import { Button } from 'slim-ui'
+
+Vue.use(Button)
+```
 
 ### Module Loader
 This is the recommended way if your application uses vue-cli or has a webpack based build with vue-loader configured. Import the components as .vue files for seamless integration within your project where path of each component is available at the "import" section of a component documentation.
@@ -59,23 +63,21 @@ Then you'll be able to utilize the component in your application.
 
 
 
-### Script Tag
-Other alternative is utilizing the components directly within the browser with UMD packages.
+### Sample usage
 
 ```html
-<script src="https://unpkg.com/vue"></script>
-<script src="https://unpkg.com/slimui/components/slimui.umd.js"></script>
-
 <div id="app">
-  <su-checkbox></su-checkbox>
+  <su-button class="button button-blue">Primary</su-button>
 </div>
 
 <script>
-new Vue({
+import { Button } from 'slim-ui';
+
+export default {
   components: {
-    'su-checkbox': Checkbox
-  }
-}).$mount('#app')
+		'su-button': Button
+	}
+}
 </script>
 ```
 

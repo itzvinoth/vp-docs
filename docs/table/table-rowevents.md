@@ -1,12 +1,12 @@
-## Toolbar
+## Row events
 
+When you want to work with row events you need to enable `row-events`. That will be described in this section, and on each row events we are getting row details.
+
+### Usage
 ```vue
 <template>
 	<div>
-		<DataTable :headers="dataHoldingsHeader" :data="dataHoldings" toolbar="false">
-			<span slot="toolbar-before" class="toolbar-before">
-				<a rel="noopener noreferrer" target="_blank" :href="''">View Reports before</a>
-			</span>
+		<DataTable :headers="dataHoldingsHeader" :data="dataHoldings" row-events @rowEnter="onRowEnter" @rowLeave="onRowLeave" @rowClick="onRowClick" @rowKeyDown="onRowKeyDown">
 			<template slot-scope="props">
 				<td>
 					{{ props.row.tradingsymbol }}
@@ -27,23 +27,33 @@
 
 <script>
 export default {
-	data () {
-		return {
-			// headers and data arrays are presented in the above
-			dataHoldingsHeader: headers,
-			dataHoldings: data
-		}
-	},
-
+  data() {
+    return {
+      // headers and data arrays are presented in the above
+      dataHoldingsHeader: headers,
+      dataHoldings: data
+    }
+  },
+  methods: {
+    onRowEnter({ row }) {
+      console.log('get row details when mouse pointer is moved onto an row element ', row)
+    },
+    onRowLeave({ row }) {
+      console.log('get row details when mouse pointer is moved out of an row element ', row)
+    },
+    onRowClick ({ row }) {
+      console.log('get row details on mouse click ', row)
+    },
+    onRowKeyDown ({ row }) {
+      console.log('row key down')
+    }
+  },
 }
 </script>
 ```
 
 <div>
-	<DataTable :headers="dataHoldingsHeader" :data="dataHoldings" toolbar="toolbar">
-		<span slot="toolbar-before" class="toolbar-before">
-			<a rel="noopener noreferrer" target="_blank" :href="''">View Reports before</a>
-		</span>
+	<DataTable :headers="dataHoldingsHeader" :data="dataHoldings" row-events @rowEnter="onRowEnter" @rowLeave="onRowLeave" @rowClick="onRowClick" @rowKeyDown="onRowKeyDown">
 		<template slot-scope="props">
 			<td>
 				{{ props.row.tradingsymbol }}
@@ -74,6 +84,7 @@ export default {
 			dataHoldingsHeader: [{
 				class: [],
 				label: "Symbol",
+				search: true,
 				field: "tradingsymbol"
 			}, {
 				class: [],
@@ -128,10 +139,18 @@ export default {
 		}
 	},
 	methods: {
-		showContextMenu (row) {
-			console.log('show Context Menu', row)
-		}
+		onRowEnter ({ row }) {
+			console.log('get row details when mouse pointer is moved onto an row element ', row)
+    },
+    onRowLeave ({ row }) {
+      console.log('get row details when mouse pointer is moved out of an row element ', row)
+    },
+    onRowClick ({ row }) {
+      console.log('row click')
+    },
+    onRowKeyDown ({ row }) {
+      console.log('row key down')
+    }
 	}
-
 }
 </script>
