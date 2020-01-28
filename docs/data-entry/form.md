@@ -3,8 +3,10 @@
 
 Form validation is the process of ensuring that user input is clean, correct, and useful.
 Typical validation tasks are: <br>
--> has the user filled in all required fields?<br>
--> has the user entered a valid data?<br>
+
+> has the user filled in all required fields?
+
+> has the user entered a valid data?<br>
 
 
 <div style="text-align: right;">

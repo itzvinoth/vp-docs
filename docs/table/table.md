@@ -15,7 +15,7 @@ There are many parameters we use in our table
 | rowEnter | This event occurs when the mouse pointer is moved onto an row element in the table. | Function | |
 | rowLeave | This event occurs when the mouse pointer is moved out of an row element in the table. | Function | |
 | rowClick | This event occurs when clicks on the row element in the table. | Function | |
-| selected | | | |
+| selected | Rows can be selectable by making first column as a selectable column | Function | |
 | rowKeyDown | | | |
 | focus | | | |
 | toolbar | | | |
@@ -26,33 +26,36 @@ There are many parameters we use in our table
 
 ```html
 <div>
-	<DataTable :headers="dataHoldingsHeader" :data="dataHoldings">
-		<template slot-scope="props">
-			<td class="textleft table-border">
-				{{ props.row.tradingsymbol }}
-			</td>
-			<td>
-				{{ props.row.collateral_value }}
-			</td>
-			<td>
-				{{ props.row.pledge_qty }}
-			</td>
-			<td>
-				{{ props.row.loan_value }}
-			</td>
-		</template>
-	</DataTable>
+  <su-table :headers="dataHoldingsHeader" :data="dataHoldings">
+    <template slot-scope="props">
+      <td class="textleft table-border">
+        {{ props.row.tradingsymbol }}
+      </td>
+      <td>
+        {{ props.row.collateral_value }}
+      </td>
+      <td>
+        {{ props.row.pledge_qty }}
+      </td>
+      <td>
+        {{ props.row.loan_value }}
+      </td>
+    </template>
+  </su-table>
 </div>
 
 <script>
 export default {
-	data () {
-		return {
-			// headers and data arrays are presented in the json tab.
-			dataHoldingsHeader: headers,
-			dataHoldings: data
-		}
-	}
+  components: {
+    "su-table": DataTable
+  },
+  data () {
+    return {
+      // headers and data arrays are presented in the json tab.
+      dataHoldingsHeader: headers,
+      dataHoldings: data
+    }
+  }
 
 }
 </script>
@@ -105,26 +108,26 @@ var data = [{
 
 ```json
 var headers = [{
-	"class": [],
-	"label": "Symbol",
-	"field": "tradingsymbol",
-	"sort": true,
-	"tableBorder": true,
-	"sortArrow": true,
-	"arrowShowDefault": true
+  "class": [],
+  "label": "Symbol",
+  "field": "tradingsymbol",
+  "sort": true,
+  "tableBorder": true,
+  "sortArrow": true,
+  "arrowShowDefault": true
 }, {
-	"class": [],
-	"label": "Max available (₹)",
-	"field": "collateral_value",
-	"tableBorder": false
+  "class": [],
+  "label": "Max available (₹)",
+  "field": "collateral_value",
+  "tableBorder": false
 }, {
-	"class": [],
-	"label": "Pledge Qty",
-	"field": "pledge_qty"
+  "class": [],
+  "label": "Pledge Qty",
+  "field": "pledge_qty"
 }, {
-	"class": [],
-	"label": "Amount required (₹)",
-	"field": "loan_value"
+  "class": [],
+  "label": "Amount required (₹)",
+  "field": "loan_value"
 }]
 ```
 :::
@@ -132,88 +135,88 @@ var headers = [{
 
 
 <div>
-	<DataTable :headers="dataHoldingsHeader" :data="dataHoldings">
-		<template slot-scope="props">
-			<td class="textleft table-border">
-				{{ props.row.tradingsymbol }}
-			</td>
-			<td>
-				{{ props.row.collateral_value }}
-			</td>
-			<td>
-				{{ props.row.pledge_qty }}
-			</td>
-			<td>
-				{{ props.row.loan_value }}
-			</td>
-		</template>
-	</DataTable>
+  <su-table :headers="dataHoldingsHeader" :data="dataHoldings">
+    <template slot-scope="props">
+      <td class="textleft table-border">
+        {{ props.row.tradingsymbol }}
+      </td>
+      <td>
+        {{ props.row.collateral_value }}
+      </td>
+      <td>
+        {{ props.row.pledge_qty }}
+      </td>
+      <td>
+        {{ props.row.loan_value }}
+      </td>
+    </template>
+  </su-table>
 </div>
 
 <script>
 import DataTable from "../.vuepress/components/SimpleUI/components/DataTable"
 
 export default {
-	components: {
-		"DataTable": DataTable
-	},
-	data () {
-		return {
-			dataHoldingsHeader: [{
-				class: [],
-				label: "Symbol",
-				field: "tradingsymbol"
-			}, {
-				class: [],
-				label: "Max available (₹)",
-				field: "collateral_value"
-			}, {
-				class: [],
-				label: "Pledge Qty",
-				field: "pledge_qty"
-			}, {
-				class: [],
-				label: "Amount required (₹)",
-				field: "loan_value"
-			}],
-			dataHoldings: [{
-	          "tradingsymbol": "QUICKHEAL",
-	          "loan_value": 253.25,
-	          "quantity": 1.0,
-	          "pledge_qty": 1.0,
-	          "collateral_value": 127.0
-	        }, {
-	          "tradingsymbol": "UPL",
-	          "loan_value": 734.85,
-	          "quantity": 1.0,
-	          "pledge_qty": 1.0,
-	          "collateral_value": 367.0
-	        }, {
-	          "tradingsymbol": "L&TFH",
-	          "loan_value": 330.9,
-	          "quantity": 2.0,
-	          "pledge_qty": 2.0,
-	          "collateral_value": 165.0
-	        }, {
-	          "tradingsymbol": "AXISBANK",
-	          "loan_value": 7011.4,
-	          "quantity": 11.0,
-	          "pledge_qty": 11.0,
-	          "collateral_value": 3506.0
-	        }, {
-	          "tradingsymbol": "WONDERLA",
-	          "loan_value": 309.15,
-	          "quantity": 1.0,
-	          "pledge_qty": 1.0,
-	          "collateral_value": 155.0
-	        }, {
-	          "tradingsymbol": "IDFCBANK",
-	          "loan_value": 44.9,
-	          "quantity": 1.0,
-	          "pledge_qty": 1.0,
-	          "collateral_value": 22.0
-	        }],
-		}
-	}
+  components: {
+    "su-table": DataTable
+  },
+  data () {
+    return {
+      dataHoldingsHeader: [{
+        class: [],
+        label: "Symbol",
+        field: "tradingsymbol"
+      }, {
+        class: [],
+        label: "Max available (₹)",
+        field: "collateral_value"
+      }, {
+        class: [],
+        label: "Pledge Qty",
+        field: "pledge_qty"
+      }, {
+        class: [],
+        label: "Amount required (₹)",
+        field: "loan_value"
+      }],
+      dataHoldings: [{
+            "tradingsymbol": "QUICKHEAL",
+            "loan_value": 253.25,
+            "quantity": 1.0,
+            "pledge_qty": 1.0,
+            "collateral_value": 127.0
+          }, {
+            "tradingsymbol": "UPL",
+            "loan_value": 734.85,
+            "quantity": 1.0,
+            "pledge_qty": 1.0,
+            "collateral_value": 367.0
+          }, {
+            "tradingsymbol": "L&TFH",
+            "loan_value": 330.9,
+            "quantity": 2.0,
+            "pledge_qty": 2.0,
+            "collateral_value": 165.0
+          }, {
+            "tradingsymbol": "AXISBANK",
+            "loan_value": 7011.4,
+            "quantity": 11.0,
+            "pledge_qty": 11.0,
+            "collateral_value": 3506.0
+          }, {
+            "tradingsymbol": "WONDERLA",
+            "loan_value": 309.15,
+            "quantity": 1.0,
+            "pledge_qty": 1.0,
+            "collateral_value": 155.0
+          }, {
+            "tradingsymbol": "IDFCBANK",
+            "loan_value": 44.9,
+            "quantity": 1.0,
+            "pledge_qty": 1.0,
+            "collateral_value": 22.0
+          }],
+    }
+  }
 }
 </script>
