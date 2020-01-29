@@ -34,7 +34,7 @@ import SlimUI from 'slim-ui'
 Vue.use(SlimUI)
 ```
 
-### Use as indiviual components
+### Or indiviual components
 ```vue
 import Vue from 'vue'
 import { Button } from 'slim-ui'
