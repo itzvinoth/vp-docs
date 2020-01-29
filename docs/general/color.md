@@ -151,19 +151,12 @@ export default {
 }
 </script>
 
-<br>
-<div class="hide-this">Hellomydear</div>
-<br>
-
 <style src="../.vuepress/styles/grid.css" scoped></style>
-<style>
+<style scoped>
 .container {
   padding-top: 25px !important;
 }
 .container .row .six.columns {
   padding-bottom: 20px;
-}
-.hide-this {
-  opacity: 0.01;
 }
 </style>

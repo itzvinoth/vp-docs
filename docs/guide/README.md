@@ -6,7 +6,7 @@
 
 If you're ready, let's [get started](./installation.md).
 
-> Notes: We keep updating on including new components and features in to this library. Our main focus is to make generic and easy to customize this library as much as possible for the developers need.
+> Notes: We keep updating on including new components and features in to this library. Our main focus is to make generic and easy to customize this library as much as possible for the developers need. Individual contributions would be appreciated.
 
 <style scoped>
 blockquote {
