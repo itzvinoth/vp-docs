@@ -71,6 +71,7 @@ export default {
       dataHoldingsHeader: [{
         class: [],
         search: true,
+        sort: true,
         label: "Symbol",
         field: "tradingsymbol"
       }, {
