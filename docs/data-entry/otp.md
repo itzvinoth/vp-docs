@@ -38,3 +38,25 @@ export default {
   }
 }
 </script>
+
+### Props
+
+#### otp-length (required)
+type `Number`
+
+Use to specify length of the OTP.
+
+#### otp-value (required)
+type `Array of integers` example `[2,1,3,5,6]`
+
+Use to assign values to the otp field.
+
+#### box-height (not required)
+type `Number`
+
+Use to specify `otp` field height.
+
+#### box-width (not required)
+type `Number`
+
+Use to specify `otp` field width.

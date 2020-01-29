@@ -25,6 +25,8 @@ export default {
 </script>
 ```
 
+### Demo
+
 <br>
 <su-checkbox v-model="bike" label="Bike" />
 <su-checkbox v-model="car" label="Car" />

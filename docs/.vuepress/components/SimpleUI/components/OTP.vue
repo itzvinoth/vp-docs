@@ -12,11 +12,13 @@ export default {
   props: {
     otpLength: {
       type: Number,
-      default: 4
+      default: 4,
+      required: true
     },
     otpValues: {
       type: Array,
-      default: []
+      default: [],
+      required: true
     },
     boxWidth: {
       type: Number,
