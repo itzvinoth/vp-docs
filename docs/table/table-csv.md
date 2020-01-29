@@ -129,3 +129,10 @@ export default {
 
 }
 </script>
+
+<style>
+.download {
+  color: #3eaf7c;
+  cursor: pointer;
+}
+</style>

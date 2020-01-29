@@ -94,7 +94,7 @@ export default {
 
 
 <style src="../.vuepress/styles/grid.css" scoped></style>
-<style>
+<style scoped>
 	.button {
 		padding: 10px 20px !important;
 		width: 100%;
