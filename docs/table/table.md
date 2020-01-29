@@ -17,6 +17,7 @@ There are many parameters we use in our table
 | rowClick | This event occurs when clicks on the row element in the table. | Function | |
 | selected | Rows can be selectable by making first column as a selectable column | Function | |
 
+<div class="upcoming"><h5>Notes: Still working on some of the table features documentation (like search, toolbar etc...). Probably in next 4 or 5 days it will be updated.</h5></div>
 
 :::: tabs
 ::: tab template
@@ -213,3 +214,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.upcoming {
+  color: #3eaf7c;
+  cursor: pointer;
+  display: flex;
+}
+</style>

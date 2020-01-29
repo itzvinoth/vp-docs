@@ -76,7 +76,7 @@ module.exports = {
               '/table/table-select',
               // '/table/table-toolbar',
               '/table/table-rowevents',
-              '/table/table-search',
+              // '/table/table-search',
             ]
           },
         ]
