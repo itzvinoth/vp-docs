@@ -6,91 +6,103 @@ Vuejs wrapper for [Tinytabs](https://github.com/knadh/tinytabs) which is a super
 <br>
 <div>
     <su-tiny-tabs id="mytabs" :anchor="false" :closable="true" :hideTitle="false" @on-close="onClose" @on-before="onBefore" @on-after="onAfter">
-		<div class="section" id="example">
-			<h3 class="title">Example code</h3>
-			<h3>Javascript</h3>
-		</div>
-		<div class="section" id="options">
-			<h3 class="title">Options table</h3>
-			<h3>Options</h3>
-		</div>
-		<div class="section" id="components">
-			<h3 class="title">Components</h3>
-			<h3>Options</h3>
-		</div>
-	</su-tiny-tabs>
+    <div class="section" id="example">
+      <h3 class="title">Example code</h3>
+      <h3>Javascript</h3>
+    </div>
+    <div class="section" id="options">
+      <h3 class="title">Options table</h3>
+      <h3>Options</h3>
+    </div>
+    <div class="section" id="components">
+      <h3 class="title">Components</h3>
+      <h3>Options</h3>
+    </div>
+  </su-tiny-tabs>
 </div>
 
 <script>
 export default {
     methods: {
         onClose (id) {
-			console.log('Callback function that gets evaluated while closing the tab', id)
+      console.log('Callback function that gets evaluated while closing the tab', id)
         },
-		onBefore (id, tab) {
-			console.log('Callback function that gets evaluated before a tab is activated', id, tab)
+    onBefore (id, tab) {
+      console.log('Callback function that gets evaluated before a tab is activated', id, tab)
         },
-		onAfter (id, tab) {
-			console.log('Callback function that gets evaluated after a tab is activated', id, tab)
-		}
+    onAfter (id, tab) {
+      console.log('Callback function that gets evaluated after a tab is activated', id, tab)
+    }
     }
 }
 </script>
 
 <style>
 .tinytabs .tabs {
-	margin-left: 15px;
-	display: flex;
-	flex-flow: row wrap;
+  border-color: #e1e1e1;
+  border-style: solid;
+  border-width: 1px 1px 0 1px;
+  display: flex;
+  flex-flow: row wrap;
+
 }
 .tinytabs .tabs .tab .close {
-	padding-left: 5px;
+  padding-left: 5px;
 }
 .tinytabs .tabs .tab {
-	margin: 0 3px 0 0;
-	background: #e1e1e1;
-	display: block;
-	padding: 6px 15px;
-	text-decoration: none;
-	color: #666;
-	font-weight: bold;
-	border-radius: 3px 3px 0 0;
+  display: block;
+  padding: 6px 15px;
+  text-decoration: none;
+  color: #666;
+  border-color: #e1e1e1;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  border-radius: 3px 3px 0 0;
+}
+.tinytabs .tabs .tab:hover {
+  text-decoration: none;
 }
 .tinytabs .section {
-	background: #f9f9f9;
-	overflow: hidden;
-	padding: 15px;
-	clear: both;
-	border-radius: 3px;
+  border-color: #e1e1e1;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  overflow: hidden;
+  padding: 15px;
+  clear: both;
+  border-radius: 3px;
 }
 .tinytabs .tab.sel {
-	background: #f9f9f9;
-	color: #333;
-	text-shadow: none;
+  border-color: #e1e1e1;
+  border-style: solid;
+  border-width: 0 0 0 0;
+  color: #333;
+  text-shadow: none;
 }
 </style>
 
 ### Sample code
+
+For testing purpose use below code. Above tabs shown will be based on this code.
 
 :::: tabs
 ::: tab template
 
 ```html
 <template>
-	<su-tiny-tabs id="mytabs" :anchor="false" :closable="true" :hideTitle="false" @on-close="onClose" @on-before="onBefore" @on-after="onAfter">
-		<div class="section" id="example">
-			<h3 class="title">Example code</h3>
-			<h3>Javascript</h3>
-		</div>
-		<div class="section" id="options">
-			<h3 class="title">Options table</h3>
-			<h3>Options</h3>
-		</div>
-		<div class="section" id="components">
-			<h3 class="title">Components</h3>
-			<h3>Options</h3>
-		</div>
-	</su-tiny-tabs>
+  <su-tiny-tabs id="mytabs" :anchor="false" :closable="true" :hideTitle="false" @on-close="onClose" @on-before="onBefore" @on-after="onAfter">
+    <div class="section" id="example">
+      <h3 class="title">Example code</h3>
+      <h3>Javascript</h3>
+    </div>
+    <div class="section" id="options">
+      <h3 class="title">Options table</h3>
+      <h3>Options</h3>
+    </div>
+    <div class="section" id="components">
+      <h3 class="title">Components</h3>
+      <h3>Options</h3>
+    </div>
+  </su-tiny-tabs>
 </template>
 ```
 :::
@@ -100,20 +112,20 @@ export default {
 import { TinyTabs } from 'slim-ui'
 
 export default {
-	components: {
-		'su-tiny-tabs': TinyTabs
-	},
-	methods: {
-		onClose (id) {
-			console.log('Callback function that gets evaluated while closing the tab', id)
+  components: {
+    'su-tiny-tabs': TinyTabs
+  },
+  methods: {
+    onClose (id) {
+      console.log('Callback function that gets evaluated while closing the tab', id)
         },
-		onBefore (id, tab) {
-			console.log('Callback function that gets evaluated before a tab is activated', id, tab)
+    onBefore (id, tab) {
+      console.log('Callback function that gets evaluated before a tab is activated', id, tab)
         },
-		onAfter (id, tab) {
-			console.log('Callback function that gets evaluated after a tab is activated', id, tab)
-		}
-	},
+    onAfter (id, tab) {
+      console.log('Callback function that gets evaluated after a tab is activated', id, tab)
+    }
+  },
 }
 ```
 :::
@@ -121,34 +133,44 @@ export default {
 ::: tab css
 ```css
 .tinytabs .tabs {
-	margin-left: 15px;
-	display: flex;
-	flex-flow: row wrap;
+  border-color: #e1e1e1;
+  border-style: solid;
+  border-width: 1px 1px 0 1px;
+  display: flex;
+  flex-flow: row wrap;
+
 }
 .tinytabs .tabs .tab .close {
-	padding-left: 5px;
+  padding-left: 5px;
 }
 .tinytabs .tabs .tab {
-	margin: 0 3px 0 0;
-	background: #e1e1e1;
-	display: block;
-	padding: 6px 15px;
-	text-decoration: none;
-	color: #666;
-	font-weight: bold;
-	border-radius: 3px 3px 0 0;
+  display: block;
+  padding: 6px 15px;
+  text-decoration: none;
+  color: #666;
+  border-color: #e1e1e1;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  border-radius: 3px 3px 0 0;
+}
+.tinytabs .tabs .tab:hover {
+  text-decoration: none;
 }
 .tinytabs .section {
-	background: #f9f9f9;
-	overflow: hidden;
-	padding: 15px;
-	clear: both;
-	border-radius: 3px;
+  border-color: #e1e1e1;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  overflow: hidden;
+  padding: 15px;
+  clear: both;
+  border-radius: 3px;
 }
 .tinytabs .tab.sel {
-	background: #f9f9f9;
-	color: #333;
-	text-shadow: none;
+  border-color: #e1e1e1;
+  border-style: solid;
+  border-width: 0 0 0 0;
+  color: #333;
+  text-shadow: none;
 }
 ```
 :::

@@ -27,6 +27,8 @@ export default {
 }
 </script>
 ```
+### Demo
+
 <br>
 <su-radio-group v-model="fruits">
 	<su-radio label="Apple" value="apple"/>

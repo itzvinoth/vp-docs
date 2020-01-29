@@ -24,6 +24,8 @@ export default {
 </script>
 ```
 
+### Demo
+
 <br>
 <su-switch v-model="order" state-on-label="Sell" state-off-label="Buy" state-on="SELL" state-off="BUY"></su-switch>
 

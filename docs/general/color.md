@@ -154,6 +154,7 @@ export default {
 <style src="../.vuepress/styles/grid.css" scoped></style>
 <style scoped>
 .container {
+  height: 1340px;
   padding-top: 25px !important;
 }
 .container .row .six.columns {
