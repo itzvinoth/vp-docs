@@ -9,6 +9,17 @@ Typical validation tasks are: <br>
 > has the user entered a valid data?<br>
 
 
+The simplest HTML5 validation feature is the `required` attribute. In `su-form` we need to mention like this.
+```js
+fnRules: [{ required: true }],
+lnRules: [{
+    required: true, message: "Please enter your last name"
+}]
+```
+
+If you try submitting the form without providing any values in these fields it throws error message. We can even provide custom error message like how in `lnRules`. Please refer demo below.
+
+### Usage
 ```vue
 <su-form @submit.prevent="doProceed" ref="contactForm">
     <su-input type="text" :rules="fnRules" v-model="firstname" static-label no-error label="First name" placeholder="Enter first name"></su-input>
@@ -51,6 +62,20 @@ export default {
     <su-button class="button button-blue" type="submit">Next</su-button>
 </su-form>
 
+<hr/>
+
+### Custom validation
+
+Simple form validation is really easy. We can achieve with `required` attribute, but let's say the use cases are like
+- to accept only mobile number
+- to accept only properly formatted URLs
+- to accept only IPv4 address
+- to accept only date input
+- to accept only Latitude/Longitude
+
+before form submission. Then we need to do custom form validation only. To achieve this we can add custom validation in rules. Please refer below code to achieve custom form valiation in `su-form`.
+
+### Usage
 
 ```vue
 <su-form @submit.prevent="doProceed" ref="contactForm">
