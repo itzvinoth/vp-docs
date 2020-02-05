@@ -5,7 +5,7 @@ Vuejs wrapper for [Tinytabs](https://github.com/knadh/tinytabs) which is a super
 
 <br>
 <div>
-    <su-tiny-tabs id="mytabs" :anchor="false" :closable="true" :hideTitle="false" @on-close="onClose" @on-before="onBefore" @on-after="onAfter">
+  <su-tiny-tabs id="mytabs" :anchor="false" :closable="true" :hideTitle="false" @on-close="onClose" @on-before="onBefore" @on-after="onAfter">
     <div class="section" id="example">
       <h3 class="title">Example code</h3>
       <h3>Javascript</h3>
@@ -23,17 +23,17 @@ Vuejs wrapper for [Tinytabs](https://github.com/knadh/tinytabs) which is a super
 
 <script>
 export default {
-    methods: {
-        onClose (id) {
+  methods: {
+    onClose (id) {
       console.log('Callback function that gets evaluated while closing the tab', id)
-        },
+    },
     onBefore (id, tab) {
       console.log('Callback function that gets evaluated before a tab is activated', id, tab)
-        },
+    },
     onAfter (id, tab) {
       console.log('Callback function that gets evaluated after a tab is activated', id, tab)
     }
-    }
+  }
 }
 </script>
 
@@ -118,10 +118,10 @@ export default {
   methods: {
     onClose (id) {
       console.log('Callback function that gets evaluated while closing the tab', id)
-        },
+    },
     onBefore (id, tab) {
       console.log('Callback function that gets evaluated before a tab is activated', id, tab)
-        },
+    },
     onAfter (id, tab) {
       console.log('Callback function that gets evaluated after a tab is activated', id, tab)
     }

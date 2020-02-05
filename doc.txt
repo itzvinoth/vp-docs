@@ -72,3 +72,7 @@ https://alligator.io/vuejs/creating-custom-plugins/
 name conventions - otp -> digits
 https://www.taniarascia.com/overview-of-css-concepts/
 https://github.com/chakra-ui/chakra-ui
+
+If your requirement is minimal and basic stuff you can use this vue component library.
+
+https://www.telerik.com/blogs/10-good-practices-building-maintaining-large-vuejs-projects
