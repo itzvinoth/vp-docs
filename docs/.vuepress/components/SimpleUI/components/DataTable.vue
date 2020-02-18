@@ -113,8 +113,22 @@
 // [x] Focus (tabbing)
 // [ ] Context menu
 
-import debounce from "lodash/debounce"
-import deepClone from 'lodash/cloneDeep'
+function debounce(func, wait, immediate) {
+  var timeout
+  return function() {
+  	var context = this, args = arguments
+  	clearTimeout(timeout)
+  	timeout = setTimeout(function() {
+  		timeout = null
+  		if (!immediate) func.apply(context, args)
+  	}, wait)
+  	if (immediate && !timeout) func.apply(context, args)
+  }
+}
+
+function deepClone(d) {
+	return JSON.parse(JSON.stringify(d))
+}
 
 export default {
 	props: {

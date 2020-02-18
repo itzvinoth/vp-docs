@@ -71,11 +71,11 @@ export default {
       dataHoldingsHeader: [{
         class: [],
         search: true,
-        sort: true,
         label: "Symbol",
         field: "tradingsymbol"
       }, {
         class: [],
+        search: true,
         label: "Max available (₹)",
         field: "collateral_value"
       }, {

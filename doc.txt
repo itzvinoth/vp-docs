@@ -76,3 +76,4 @@ https://github.com/chakra-ui/chakra-ui
 If your requirement is minimal and basic stuff you can use this vue component library.
 
 https://www.telerik.com/blogs/10-good-practices-building-maintaining-large-vuejs-projects
+https://docs.laravel-enso.com/frontend/tables.html#installation
