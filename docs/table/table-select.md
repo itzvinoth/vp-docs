@@ -36,7 +36,7 @@ export default {
     return {
       // values inside 'tradingsymbol' are unique. and it prevents from selecting same elements multiple times.
       uid: "tradingsymbol",
-      // headers and data arrays are presented in the above
+      // headers and data arrays are available in the table introduction section
       dataHoldingsHeader: headers,
       dataHoldings: data
     }

@@ -70,7 +70,7 @@ export default {
   },
   data () {
     return {
-      // headers and data arrays are presented in the above
+      // headers and data arrays are available in the table introduction section
       dataHoldingsHeader: headers,
       dataHoldings: data
     }

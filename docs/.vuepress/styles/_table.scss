@@ -102,5 +102,18 @@
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
         top: 3px !important;
-    }
+		}
+		ul {
+			list-style-type: none;
+			margin-left: 200px;
+		}
+		li {
+				cursor: pointer;
+				display: inline;
+				margin: 5px 5px;
+		}
+		li.selected {
+				color: #0059c1;
+				text-decoration: underline;
+		}
 }

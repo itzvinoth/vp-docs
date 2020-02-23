@@ -1,49 +1,30 @@
-## Download CSV
+## Pagination
 
-Exporting html table data as `.csv` file
 
->  To enable it we need to include `download-csv` attribute and to mention the csv file name. In here we mentioned `table.csv`.
+`su-table` supports basic pagination. So pagination controls how many rows are displayed per page. Below attributes are needed to add to the `su-table`
 
-### Usage
 ```vue
-<div>
-  <su-table :headers="dataHoldingsHeader" :data="dataHoldings" download-csv="table.csv">
-    <template slot-scope="props">
-      <td>
-        {{ props.row.tradingsymbol }}
-      </td>
-      <td>
-        {{ props.row.collateral_value }}
-      </td>
-      <td>
-        {{ props.row.pledge_qty }}
-      </td>
-      <td>
-        {{ props.row.loan_value }}
-      </td>
-    </template>
-  </su-table>
-</div>
+<su-table :headers="dataHoldingsHeader" :data="dataHoldings" pagination :per-page="perPage" :current-page="currentPage">
+...
+</su-table>
 
 <script>
 export default {
-  components: {
-    "su-table": DataTable
-  },
   data () {
     return {
+      perPage: 2,
+      currentPage: 1,
       // headers and data arrays are available in the table introduction section
       dataHoldingsHeader: headers,
       dataHoldings: data
     }
-  },
-
+  }
 }
 </script>
 ```
 
 <div>
-  <su-table :headers="dataHoldingsHeader" :data="dataHoldings" download-csv="table.csv">
+  <su-table :headers="dataHoldingsHeader" :data="dataHoldings" pagination :per-page="perPage" :current-page="currentPage">
     <template slot-scope="props">
       <td>
         {{ props.row.tradingsymbol }}
@@ -70,14 +51,19 @@ export default {
   },
   data () {
     return {
+      perPage: 2,
+      currentPage: 1,
       dataHoldingsHeader: [{
         class: [],
         label: "Symbol",
-        field: "tradingsymbol"
+        field: "tradingsymbol",
+        sort: false,
+        tableBorder: false
       }, {
         class: [],
         label: "Max available (₹)",
-        field: "collateral_value"
+        field: "collateral_value",
+        tableBorder: false
       }, {
         class: [],
         label: "Pledge Qty",
@@ -130,9 +116,17 @@ export default {
 }
 </script>
 
-<style>
-.download {
-  color: #3eaf7c;
-  cursor: pointer;
-}
-</style>
+<hr/>
+
+### Pagination related props
+
+We need to add below props to set pagination
+
+|  Property  |  Description  |  Type  |  Default  |  Required  |
+| ------------- | ------------- |:-----:| -----:| -----:|
+|  pagination  | Enable pagination  |  Boolean  |  false  |  true  |
+|  per-page  | Maximum number of rows displayed per page (Starts from 1)  |  Number  |  false  |  true  |
+|  current-page  | Current page number (Starts from 1) |  Number  |  false  |  true  |
+|  next-text  | Text for the next. |  String  |  Next  |  false  |
+|  prev-text  | Text for the prev. |  String  |  Prev  |  false  |
+

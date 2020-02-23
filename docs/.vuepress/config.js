@@ -77,6 +77,7 @@ module.exports = {
               // '/table/table-toolbar',
               '/table/table-rowevents',
               '/table/table-search',
+              '/table/table-pagination',
             ]
           },
         ]
