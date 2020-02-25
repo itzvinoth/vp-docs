@@ -23,6 +23,8 @@ export default {
 </script>
 ```
 
+### Demo
+
 <div>
   <su-table :headers="dataHoldingsHeader" :data="dataHoldings" pagination :per-page="perPage" :current-page="currentPage">
     <template slot-scope="props">
